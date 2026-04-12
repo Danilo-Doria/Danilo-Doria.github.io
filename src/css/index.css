@@ -1,0 +1,164 @@
+#sobre_mi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 0;
+    gap: 1rem;
+    scroll-margin-top: 5rem;
+}
+
+
+.presentation {
+    line-height: 1.6;
+    margin-right: 10vw;
+}
+
+span {
+    color: var(--color-hover)
+}
+
+
+#proyectos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-2);
+    padding: 5rem 5rem;
+
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-card);
+    padding: 1rem;
+    color: var(--color-text);
+    transition: transform 0.3s ease;
+    outline: none;
+    border-radius: 16px;
+    height: 100%;
+}
+
+.project-card:hover,
+.project-card:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--color-hover);
+}
+
+.project-card:active {
+    transform: scale(1);
+}
+
+
+
+.card-content {
+    max-width: 30rem;
+    margin: 1rem 1rem 0 1rem;
+}
+
+#contactos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 5rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    max-width: 400px;
+}
+
+.contact-title {
+    font-weight: bold;
+}
+
+#name,
+#email {
+    padding: 0.8rem 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.4);
+}
+
+.submit {
+    padding: 0.8rem 8rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #6c63ff;
+    color: white;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+    outline: none;
+}
+
+.submit:hover,
+.submit:focus {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.submit:active {
+    transform: scale(1);
+}
+
+.footer {
+    margin-top: 10rem;
+}
+
+.address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.address img {
+    width: 1.6rem;
+}
+
+.address a {
+    transition: all 0.3s ease;
+}
+
+.address a:hover,
+.address a:focus {
+    transform: scale(1.1);
+    outline: dotted;
+    outline-offset: 3px;
+    outline-color: var(--color-hover);
+}
+
+.address a:active {
+    transform: scale(1);
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
