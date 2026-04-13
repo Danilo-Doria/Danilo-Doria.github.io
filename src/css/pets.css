@@ -1,14 +1,14 @@
-#proyectos {
-    margin: 10rem 0;
+#pets {
+    padding: 10rem 0 0 0;
 }
 
 .gallery-layout {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     align-items: center;
     justify-content: center;
-    padding: 5rem 1rem;
+    padding: 5rem 2rem;
+    gap: 20px;
 }
 
 .projects-grid {
@@ -23,28 +23,23 @@
     }
 }
 
-.project-card img {
-    max-width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-}
-
 .card-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
+    padding: 0.5rem;
     gap: 0.5rem;
     background-color: var(--color-bg-card);
     color: var(--color-text);
     transition: transform 0.3s ease;
     outline: none;
+    font-size: 0.6rem;
 }
 
 .gallery-description {
-    min-width: 250px;
+    max-width: 50%;
+    margin: 2rem 0rem;
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 12px;

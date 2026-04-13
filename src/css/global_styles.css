@@ -13,6 +13,7 @@
     --color-bg-2: #2d132d;
     --color-bg-card: #512351;
     --color-hover: #e6bc14;
+    --color-hover-2: #ecd98f;
     --color-text: #ffff;
 }
 
@@ -22,6 +23,8 @@ html {
 }
 
 body {
+    min-height: 100vh;
+    min-width: 100vw;
     color: var(--color-text);
     font-family: 'Times New Roman', Times, sans-serif serif;
     background: var(--color-bg);
@@ -45,7 +48,7 @@ body {
     cursor: pointer;
     backdrop-filter: blur(20px);
     border-radius: 16px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem;
     color: white;
 }
 
@@ -91,18 +94,37 @@ body {
 
 hr {
     border: none;
-    border-top: 1px solid #ecd98f;
-    ;
+    height: 3px;
+    background: #ecd98f;
+    box-shadow: 
+        0 0 10px #ecd98f,
+        0 0 25px #ecd98f;
+    animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        box-shadow: 
+            0 0 10px #ecd98f,
+            0 0 25px #ecd98f,
+            0 0 40px #ecd98f;
+        opacity: 1;
+    }
+
+    20%, 24%, 55% {
+        box-shadow: none;
+        opacity: 0.4;
+    }
+}
+
+.main-title {
+    font-size: 2.5rem;
+    margin-left: 5vw;
 }
 
 .title {
     margin: 3rem;
     font-size: 2rem;
-}
-
-.main-title {
-    font-size: 2.5rem;
-    margin-left: 10vw;
 }
 
 .footer {
@@ -184,6 +206,16 @@ hr {
     .nav.active {
         display: none;
     }
+
+    .title {
+        margin: 4rem;
+        font-size: 3rem;
+    }
+
+    .footer-text {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
 }
 
 img {
@@ -192,6 +224,41 @@ img {
     height: auto;
 }
 
+span {
+    color: var(--color-hover)
+}
+
+.bubbles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bubbles span {
+  position: absolute;
+  bottom: -50px;
+  width: 10px;
+  height: 10px;
+  background: orange;
+  border-radius: 50%;
+  animation: rise 10s linear infinite;
+}
+
+/* animación hacia arriba */
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
 
 /* @media (min-width: 1024px) {
 }
