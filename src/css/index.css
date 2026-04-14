@@ -52,7 +52,7 @@
 
 @media (min-width: 1024px) {
     #sobre_mi {
-        margin: 15rem 0;
+        margin: 20rem 0;
     }
 
     .main-title {
@@ -84,6 +84,7 @@
     outline: none;
     border-radius: 16px;
     max-width: 50vw;
+    text-align: center;
 }
 
 .project-card img {
@@ -92,7 +93,7 @@
     object-fit: contain;
 }
 
-.project-card h3 {
+.project-card h3{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,15 +141,15 @@
 #name,
 #email {
     padding: 0.8rem 1rem;
-    border: 2px solid #ccc;
+    border: 2px solid var(--color-text);
     border-radius: 8px;
     outline: none;
     transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .submit:focus {
-    border-color: #6c63ff;
-    box-shadow: 0 0 5px rgba(108, 99, 255, 0.4);
+    border-color: var(--color-submit);
+    box-shadow: 0 0 5px var(--color-submit);
 }
 
 .submit {
@@ -157,8 +158,8 @@
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    background-color: #6c63ff;
-    color: white;
+    background-color: var(--color-submit);
+    color: var(--color-text);
     transition: transform 0.2s ease, opacity 0.3s ease;
     outline: none;
 }

@@ -14,7 +14,10 @@
     --color-bg-card: #512351;
     --color-hover: #e6bc14;
     --color-hover-2: #ecd98f;
+    --color-bubble: #ffa500;
+    ;
     --color-text: #ffff;
+    --color-submit: #6c63ff;
 }
 
 html {
@@ -35,8 +38,8 @@ body {
 
 .header {
     position: fixed;
-    top: 20px;
-    right: 10px;
+    top: 5%;
+    right: 5%;
     z-index: 1;
 }
 
@@ -49,15 +52,15 @@ body {
     backdrop-filter: blur(20px);
     border-radius: 16px;
     padding: 0.5rem 0.8rem;
-    color: white;
+    color: var(--color-text);
 }
 
 /* menú oculto por defecto */
-.nav {
+#navMenu {
     display: none;
     position: absolute;
     top: 110%;
-    right: 0%;
+    right: 10%;
     flex-direction: column;
     gap: 1rem;
     text-align: center;
@@ -67,7 +70,7 @@ body {
 }
 
 /* cuando se active */
-.nav.active {
+#navMenu.active {
     display: flex;
 }
 
@@ -75,7 +78,7 @@ a {
     text-decoration: none;
 }
 
-.nav a {
+#navMenu a {
     font-size: 0.8em;
     color: var(--color-text);
     text-decoration: none;
@@ -85,56 +88,26 @@ a {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.nav a:hover,
-.nav a:focus {
+#navMenu a:hover,
+#navMenu a:focus {
     color: var(--color-hover);
     transform: scale(1.1);
     outline: none;
 }
 
-.nav a:active {
+#navMenu a:active {
     transform: scale(1);
 }
 
 hr {
     display: none;
     border: none;
-    height: 3px;
-    background: #ecd98f;
+    height: 4px;
+    background: var(--color-hover-2);
     box-shadow:
-        0 0 10px #ecd98f,
-        0 0 25px #ecd98f;
+        0 0 10px var(--color-hover-2),
+        0 0 25px var(--color-hover-2);
     animation: flicker 3s infinite;
-}
-
-@media (min-width: 768px) {
-    hr {
-        display: block;
-    }
-}
-
-@keyframes flicker {
-
-    0%,
-    18%,
-    22%,
-    25%,
-    53%,
-    57%,
-    100% {
-        box-shadow:
-            0 0 10px #ecd98f,
-            0 0 25px #ecd98f,
-            0 0 40px #ecd98f;
-        opacity: 1;
-    }
-
-    20%,
-    24%,
-    55% {
-        box-shadow: none;
-        opacity: 0.4;
-    }
 }
 
 .main-title {
@@ -186,6 +159,33 @@ hr {
     font-size: 0.8rem;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+span {
+    color: var(--color-hover)
+}
+
+.bubbles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.bubbles span {
+    position: absolute;
+    bottom: -50px;
+    width: 10px;
+    height: 10px;
+    background: var(--color-bubble);
+    border-radius: 50%;
+    animation: rise 10s linear infinite;
+}
+
 @media (min-width: 768px) {
     body {
         font-size: 1.3rem;
@@ -212,7 +212,7 @@ hr {
         display: none;
     }
 
-    .nav {
+    #navMenu {
         display: flex;
         position: static;
         flex-direction: row;
@@ -223,7 +223,7 @@ hr {
         padding: 1rem;
     }
 
-    .nav.active {
+    #navMenu.active {
         display: none;
     }
 
@@ -236,36 +236,17 @@ hr {
         margin-top: 1rem;
         font-size: 0.9rem;
     }
+
+    .address img {
+        width: 2rem;
+    }
+
+    hr {
+        display: block;
+    }
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-span {
-    color: var(--color-hover)
-}
-
-.bubbles {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.bubbles span {
-    position: absolute;
-    bottom: -50px;
-    width: 10px;
-    height: 10px;
-    background: orange;
-    border-radius: 50%;
-    animation: rise 10s linear infinite;
-}
-
-/* animación hacia arriba */
+/* animación burbujas hacia arriba */
 @keyframes rise {
     0% {
         transform: translateY(0) scale(1);
@@ -282,9 +263,27 @@ span {
     }
 }
 
-/* @media (min-width: 1024px) {
+/* animación barra de luz glitch */
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        box-shadow:
+            0 0 10px var(--color-bubble),
+            0 0 25px var(--color-bubble),
+            0 0 40px var(--color-bubble);
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        box-shadow: none;
+        opacity: 0.4;
+    }
 }
-
-
-@media (min-width: 1280px) {
-} */
