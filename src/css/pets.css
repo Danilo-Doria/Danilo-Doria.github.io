@@ -1,25 +1,43 @@
 #pets {
-    padding: 10rem 0 0 0;
+    padding: 5rem 0 0 0;
+}
+
+.title {
+    text-align: center;
 }
 
 .gallery-layout {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem 2rem;
+    padding: 0rem 2rem 5rem 2rem;
     gap: 20px;
 }
 
-.projects-grid {
+.pets-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
 @media (min-width: 768px) {
-    .projects-grid {
+    #pets {
+        padding: 10rem 0 0 0 0;
+    }
+
+    .pets-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pets-grid a {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery-layout {
+        padding: 5rem 10rem;
     }
 }
 
@@ -35,12 +53,14 @@
     transition: transform 0.3s ease;
     outline: none;
     font-size: 0.6rem;
+    max-width: 400px;
 }
 
 .gallery-description {
-    max-width: 50%;
-    margin: 2rem 0rem;
+    max-width: 500px;
+    margin: 5rem 0rem;
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 12px;
+    background-color: var(--color-bg-2);
 }
