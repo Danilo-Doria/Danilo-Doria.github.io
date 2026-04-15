@@ -37,6 +37,16 @@
 
 }
 
+.pets-card:hover,
+.pets-card:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px var(--color-hover-2);
+}
+
+.pets-card:active {
+    transform: scale(1);
+}
+
 .card-content {
     display: flex;
     flex-direction: column;
