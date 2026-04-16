@@ -1,16 +1,30 @@
 #sobre_mi {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 50px;
     margin: 10rem 0;
     scroll-margin-top: 10rem;
-    gap: 1rem;
     padding: 0 20vw 0 20vw;
+}
+
+.main-title {
+    align-self: end;
 }
 
 .presentation {
     line-height: 1.6;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo {
+    border-radius: 25%;
+   
 }
 
 #proyectos {
@@ -37,6 +51,10 @@
         line-height: 1.6;
     }
 
+    .profile-photo {
+        max-width: 70%;
+    }
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -52,6 +70,8 @@
 
 @media (min-width: 1024px) {
     #sobre_mi {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
         margin: 20rem 0;
     }
 
@@ -60,8 +80,16 @@
     }
 
     .presentation {
-        line-height: 1.6;
-        font-size: 1.5rem;
+        grid-row-start: 2;
+        align-self: center;
+        justify-self: center;
+        max-width: 700px;
+    }
+
+    .profile-container {
+        grid-row: span 2;
+        justify-self: center;
+        align-self: center;
     }
 
     .projects-grid {
