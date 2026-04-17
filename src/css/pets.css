@@ -2,8 +2,9 @@
     padding: 5rem 0 0 0;
 }
 
-.title {
+.main-title {
     text-align: center;
+    margin: 5rem 0;
 }
 
 .gallery-layout {
@@ -73,10 +74,15 @@
 
 .gallery-description h3 {
     margin-bottom: 1rem;
-    
+
 }
 
 @media (min-width: 768px) {
+    .main-title {
+        font-size: 4rem;
+        margin: 5rem 0;
+    }
+
     #pets {
         padding: 10rem 0 0 0 0;
     }
