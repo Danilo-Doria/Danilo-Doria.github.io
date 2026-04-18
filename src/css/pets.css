@@ -1,3 +1,4 @@
+/* Pets section */
 #pets {
     padding: 5rem 0 0 0;
 }
@@ -35,7 +36,6 @@
     border-radius: 16px;
     max-width: 50vw;
     text-align: center;
-
 }
 
 .pets-card:hover,
@@ -74,15 +74,10 @@
 
 .gallery-description h3 {
     margin-bottom: 1rem;
-
 }
 
+/* Media queries */
 @media (min-width: 768px) {
-    .main-title {
-        font-size: 4rem;
-        margin: 5rem 0;
-    }
-
     #pets {
         padding: 10rem 0 0 0 0;
     }
@@ -101,8 +96,13 @@
 }
 
 @media (min-width: 1024px) {
+    .main-title {
+        text-align: center;
+        margin: 3rem 0;
+    }
+
     .gallery-layout {
-        padding: 5rem 10rem;
+        padding: 3rem 10rem;
     }
 
     .gallery-description {

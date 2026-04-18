@@ -15,7 +15,6 @@
     --color-hover: #e6bc14;
     --color-hover-2: #ecd98f;
     --color-bubble: #ffa500;
-    ;
     --color-text: #ffff;
     --color-submit: #6c63ff;
 }
@@ -42,8 +41,8 @@ body {
     z-index: 1;
 }
 
-/* botón hamburguesa visible en móvil */
-#menuToggle {
+/* Burger menu only displayed on mobile devices */
+#menu-toggle {
     font-size: 1.5rem;
     border: none;
     background: transparent;
@@ -54,8 +53,8 @@ body {
     color: var(--color-text);
 }
 
-/* menú oculto por defecto */
-#navMenu {
+/* navigation menu hidden by default */
+#nav-menu {
     display: none;
     position: absolute;
     top: 110%;
@@ -68,8 +67,8 @@ body {
     padding: 1rem;
 }
 
-/* cuando se active */
-#navMenu.active {
+/* navigation menu displayed when the buttom is clicked */
+#nav-menu.active {
     display: flex;
 }
 
@@ -77,28 +76,28 @@ a {
     text-decoration: none;
 }
 
-#navMenu a {
+/* Links inside the navigation menu */
+#nav-menu a {
     font-size: 0.8em;
     color: var(--color-text);
-    text-decoration: none;
     font-weight: bold;
-    white-space: nowrap;
     margin: 0 0.1rem;
+    outline: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-#navMenu a:hover,
-#navMenu a:focus {
+#nav-menu a:hover,
+#nav-menu a:focus {
     color: var(--color-hover);
     transform: scale(1.1);
-    outline: none;
 }
 
-#navMenu a:active {
+#nav-menu a:active {
     transform: scale(1);
 }
 
-hr {
+/* Light bar with flicker effect*/
+.light-bar {
     display: none;
     border: none;
     height: 4px;
@@ -109,11 +108,12 @@ hr {
     animation: flicker 3s infinite;
 }
 
+/* h1 titles */
 .main-title {
     font-size: 2.5rem;
-    align-self: end;
 }
 
+/* h2 titles */
 .title {
     margin: 3rem;
     font-size: 2rem;
@@ -123,6 +123,7 @@ hr {
     margin-top: 10rem;
 }
 
+/* Personal links like Github, Linkedin... */
 .address {
     display: flex;
     justify-content: center;
@@ -130,6 +131,7 @@ hr {
     gap: 3rem;
 }
 
+/* Icons of the address links */
 .address img {
     width: 1.6rem;
 }
@@ -150,7 +152,7 @@ hr {
     transform: scale(1);
 }
 
-.footer-text {
+.footer-copyright {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,6 +170,7 @@ span {
     color: var(--color-hover)
 }
 
+/* Bubbles covering the all background */
 .bubbles {
     position: fixed;
     inset: 0;
@@ -175,6 +178,7 @@ span {
     z-index: -1;
 }
 
+/* The properties of bubules itselfs*/
 .bubbles span {
     position: absolute;
     bottom: -50px;
@@ -185,11 +189,13 @@ span {
     animation: rise 10s linear infinite;
 }
 
+/* Media queries */
 @media (min-width: 768px) {
     body {
         font-size: 1.3rem;
     }
 
+    /* New navigation menu displayed for tablets, laptops... */
     .header {
         position: fixed;
         top: 20px;
@@ -199,19 +205,17 @@ span {
         justify-content: space-evenly;
         align-items: center;
         font-weight: bold;
-        backdrop-filter: blur(20px);
         border-radius: 24px;
         width: max-content;
-        height: auto;
-        padding: none;
-        z-index: 1;
     }
 
-    #menuToggle {
+    /* Burger menu hidden for tablets, laptops... */
+    #menu-toggle {
         display: none;
     }
 
-    #navMenu {
+    /* New navigation menu */
+    #nav-menu {
         display: flex;
         position: static;
         flex-direction: row;
@@ -222,16 +226,12 @@ span {
         padding: 1rem;
     }
 
-    #navMenu.active {
-        display: none;
-    }
-
     .title {
         margin: 4rem;
         font-size: 3rem;
     }
 
-    .footer-text {
+    .footer-copyright {
         margin-top: 1rem;
         font-size: 0.9rem;
     }
@@ -240,15 +240,15 @@ span {
         width: 2rem;
     }
 
-    hr {
+    .light-bar {
         display: block;
     }
 }
 
-/* animación burbujas hacia arriba */
+/* Bubbles rising animation */
 @keyframes rise {
     0% {
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
         opacity: 0;
     }
 
@@ -257,12 +257,12 @@ span {
     }
 
     100% {
-        transform: translateY(-110vh) scale(1.5);
+        transform: translateY(-110vh) scale(2);
         opacity: 0;
     }
 }
 
-/* animación barra de luz glitch */
+/* Light bar glitching animation */
 @keyframes flicker {
 
     0%,
