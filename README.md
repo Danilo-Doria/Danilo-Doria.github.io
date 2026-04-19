@@ -1,8 +1,6 @@
 # Danilo-Doria.github.io
 Source code for my personal portfolio website. Built with HTML, CSS, and JavaScript. Full responsive, clean and modern.
 
----
-
 ## 📌 Table of Contents
 - [Description](#-description)
 - [Features](#-features)
@@ -11,8 +9,6 @@ Source code for my personal portfolio website. Built with HTML, CSS, and JavaScr
 - [Preview](#-preview)
 - [Installation](#-installation)
 - [Author](#-author)
-
----
 
 ## 📖 Description
 
@@ -23,8 +19,6 @@ The objective is to create a responsive website that includes:
 - Featured projects
 - A contact form or contact information
 
----
-
 ## ✨ Features
 
 - Responsive design 📱💻
@@ -32,8 +26,6 @@ The objective is to create a responsive website that includes:
 - Animations with CSS
 - Layout with Flexbox and Grid
 - Basic interactivity with JavaScript
-
----
 
 ## 🛠 Stack
 
@@ -44,8 +36,6 @@ The objective is to create a responsive website that includes:
 - CSS Grid
 - Media Queries
 
----
-
 ## 📂 Project Structure
 
 ```bash
@@ -53,13 +43,24 @@ The objective is to create a responsive website that includes:
 ├── index.html
 ├── LICENSE
 ├── public
-│   ├── email-icon.svg
-│   ├── fav-icon.png
-│   ├── github-icon.svg
-│   ├── linkedin-icon.svg
-│   ├── perro2.webp
-│   ├── perro3.jpg
-│   └── perro.avif
+│   ├── icons
+│   │   ├── email-icon.svg
+│   │   ├── fav-icon.png
+│   │   ├── github-icon.svg
+│   │   └── linkedin-icon.svg
+│   └── images
+│       ├── DaniloDoria-Photo.jpg
+│       ├── perro2.webp
+│       ├── perro3.jpg
+│       ├── perro.avif
+│       ├── preview-1.png
+│       ├── preview-2.png
+│       ├── project-1.png
+│       ├── project-2.png
+│       ├── project-3.png
+│       ├── project-4.png
+│       ├── project-5.png
+│       └── project-6.png
 ├── README.md
 └── src
     ├── css
@@ -71,15 +72,11 @@ The objective is to create a responsive website that includes:
         └── pets.html
 ```
 
----
-
 ## 🖼 Preview
 
-```markdown
-![Portfolio preview](./assets/images/preview.png)
-```
+![Portfolio preview](./public/images/preview-1.png)
 
----
+![Pets preview](public/images/preview-2.png)
 
 ## 🚀 Installation
 
@@ -92,14 +89,11 @@ git clone https://github.com/Danilo-Doria/Danilo-Doria.github.io.git
 
 2. Open the `index.html` file in your browser.
 
----
-
 ## 👨‍💻 Author
 
 - GitHub: **[Danilo-Doria](https://github.com/Danilo-Doria)**
 - LinkedIn: **[Danilo Doria Diaz](https://www.linkedin.com/in/danilodd)**
 - Correo: **danilodoria519@gmail.com**
----
 
 ## 📄 Licence
 

@@ -66,8 +66,8 @@
 
 .project-card img {
     width: 100%;
-    height: 50%;
-    object-fit: contain;
+    height: 128px;
+    object-fit: cover;
 }
 
 .project-card h3 {
