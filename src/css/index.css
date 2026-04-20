@@ -1,3 +1,5 @@
+@import url(./global_styles.css);
+
 /* About me section */
 #about-me {
     display: grid;

@@ -49,10 +49,16 @@ The objective is to create a responsive website that includes:
 │   │   ├── github-icon.svg
 │   │   └── linkedin-icon.svg
 │   └── images
+│       ├── beagle.webp
+│       ├── bulldog.webp
+│       ├── chihuahua.webp
+│       ├── dalmata.webp
 │       ├── DaniloDoria-Photo.jpg
-│       ├── perro2.webp
-│       ├── perro3.jpg
-│       ├── perro.avif
+│       ├── doberman.webp
+│       ├── golden.webp
+│       ├── husky.jpg
+│       ├── pastor.webp
+│       ├── poodle.webp
 │       ├── preview-1.png
 │       ├── preview-2.png
 │       ├── project-1.png
@@ -60,14 +66,16 @@ The objective is to create a responsive website that includes:
 │       ├── project-3.png
 │       ├── project-4.png
 │       ├── project-5.png
-│       └── project-6.png
+│       ├── project-6.png
+│       └── pug.webp
 ├── README.md
 └── src
     ├── css
     │   ├── global_styles.css
     │   ├── index.css
     │   └── pets.css
-    ├── script.js
+    ├── js
+    │   └── script.js
     └── views
         └── pets.html
 ```
