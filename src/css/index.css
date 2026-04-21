@@ -1,5 +1,7 @@
 @import url(./global_styles.css);
 
+/* Mobile First */
+
 /* About me section */
 #about-me {
     display: grid;
@@ -69,7 +71,7 @@
 .project-card img {
     width: 100%;
     height: 128px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .project-card h3 {
@@ -152,6 +154,8 @@
 }
 
 /* Media queries */
+
+/* tablets screen size */
 @media (min-width: 768px) {
     .main-title {
         font-size: 3rem;
@@ -179,6 +183,7 @@
     }
 }
 
+/* laptops screen size */
 @media (min-width: 1024px) {
     #about-me {
         grid-template-columns: 2fr 1fr;

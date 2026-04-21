@@ -1,5 +1,7 @@
 @import url(./global_styles.css);
 
+/* Mobile First */
+
 /* Pets section */
 #pets {
     padding: 5rem 0 0 0;
@@ -52,7 +54,7 @@
 
 .pet-image {
     width: 100%;
-    height: 158px;
+    height: 128px;
     object-fit: cover;
     border-radius: 24px;
 }
@@ -86,6 +88,8 @@
 }
 
 /* Media queries */
+
+/* tablets screen size */
 @media (min-width: 768px) {
     #pets {
         padding: 10rem 0 0 0 0;
@@ -96,7 +100,7 @@
     }
 
     .pets-grid a {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .card-description {
@@ -104,6 +108,7 @@
     }
 }
 
+/* laptops screen size */
 @media (min-width: 1024px) {
     .main-title {
         text-align: center;
@@ -115,13 +120,10 @@
     }
 
     .gallery-description {
-        max-width: 700px;
+        max-width: 900px;
     }
 
     .pet-image {
-        width: 100%;
-        height: 298px;
-        object-fit: contain;
+        height: 258px;
     }
-
 }
