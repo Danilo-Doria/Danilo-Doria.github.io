@@ -20,6 +20,7 @@
 
 .presentation {
     line-height: 1.6;
+    justify-self: start;
 }
 
 .profile-container {
@@ -70,8 +71,8 @@
 
 .project-card img {
     width: 100%;
-    height: 128px;
-    object-fit: contain;
+    max-height: 20vw;
+    object-fit: cover;
 }
 
 .project-card h3 {
@@ -168,7 +169,7 @@
     .profile-photo {
         max-width: 60%;
     }
-    
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -216,5 +217,9 @@
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
         max-width: 80%;
+    }
+
+    .project-card img {
+        max-height: 10vw;
     }
 }
