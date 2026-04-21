@@ -1,0 +1,293 @@
+/* Mobile First */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: radial-gradient(circle at center top,
+            rgb(14, 13, 13) 0%,
+            rgb(25, 18, 29) 35%,
+            rgb(35, 13, 41) 70%,
+            rgb(30, 2, 37) 100%);
+    --color-bg-2: #2d132d;
+    --color-bg-card: #512351;
+    --color-hover: #e6bc14;
+    --color-hover-2: #ecd98f;
+    --color-bubble: #ffa500;
+    --color-text: #ffff;
+    --color-submit: #6c63ff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+    color: var(--color-text);
+    font-family: 'Times New Roman', Times, sans-serif serif;
+    background: var(--color-bg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 1rem;
+}
+
+.header {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 1;
+}
+
+/* Burger menu only displayed on mobile devices */
+#menu-toggle {
+    font-size: 1.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 0.5rem 0.8rem;
+    color: var(--color-text);
+}
+
+/* navigation menu hidden by default */
+#nav-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 10%;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 1rem;
+}
+
+/* navigation menu displayed when the buttom is clicked */
+#nav-menu.active {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Links inside the navigation menu */
+#nav-menu a {
+    font-size: 0.8em;
+    color: var(--color-text);
+    font-weight: bold;
+    margin: 0 0.1rem;
+    outline: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#nav-menu a:hover,
+#nav-menu a:focus {
+    color: var(--color-hover);
+    transform: scale(1.1);
+}
+
+#nav-menu a:active {
+    transform: scale(1);
+}
+
+/* Light bar with flicker effect*/
+.light-bar {
+    display: none;
+    border: none;
+    height: 4px;
+    background: var(--color-hover-2);
+    box-shadow:
+        0 0 10px var(--color-hover-2),
+        0 0 25px var(--color-hover-2);
+    animation: flicker 3s infinite;
+}
+
+/* h1 titles */
+.main-title {
+    font-size: 2.5rem;
+}
+
+/* h2 titles */
+.title {
+    margin: 3rem;
+    font-size: 2rem;
+}
+
+.footer {
+    margin-top: 10rem;
+}
+
+/* Personal links like Github, Linkedin... */
+.address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Icons of the address links */
+.address img {
+    width: 1.6rem;
+}
+
+.address a {
+    transition: all 0.3s ease;
+}
+
+.address a:hover,
+.address a:focus {
+    transform: scale(1.1);
+    outline: dotted;
+    outline-offset: 3px;
+    outline-color: var(--color-hover);
+}
+
+.address a:active {
+    transform: scale(1);
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+span {
+    color: var(--color-hover)
+}
+
+/* Bubbles covering the all background */
+.bubbles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* The properties of bubules itselfs*/
+.bubbles span {
+    position: absolute;
+    bottom: -50px;
+    width: 10px;
+    height: 10px;
+    background: var(--color-bubble);
+    border-radius: 50%;
+    animation: rise 10s linear infinite;
+}
+
+/* Media queries */
+
+/* tablets and laptops screen size */
+@media (min-width: 768px) {
+    body {
+        font-size: 1.3rem;
+    }
+
+    /* New navigation menu displayed for tablets, laptops... */
+    .header {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-weight: bold;
+        border-radius: 24px;
+        width: max-content;
+    }
+
+    /* Burger menu hidden for tablets, laptops... */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* New navigation menu */
+    #nav-menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        gap: 2rem;
+        font-size: 1.2rem;
+        text-align: center;
+        backdrop-filter: blur(20px);
+        border-radius: 24px;
+        padding: 1rem;
+    }
+
+    .title {
+        margin: 4rem;
+        font-size: 3rem;
+    }
+
+    .footer-copyright {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .address img {
+        width: 2rem;
+    }
+
+    .light-bar {
+        display: block;
+    }
+}
+
+/* Bubbles rising animation */
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(2);
+        opacity: 0;
+    }
+}
+
+/* Light bar glitching animation */
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        box-shadow:
+            0 0 10px var(--color-bubble),
+            0 0 25px var(--color-bubble),
+            0 0 40px var(--color-bubble);
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        box-shadow: none;
+        opacity: 0.4;
+    }
+}

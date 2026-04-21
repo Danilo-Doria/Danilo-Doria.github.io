@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Danilo Doria</title>
+    <meta name="author" content="Danilo Doria">
+    <meta name="description" content="Portafolio de Danilo Andres Doria Diaz, dale un vistazo 
+    a mis habilidades, expericencias y todo lo que tengo para ofrecer.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="./public/icons/fav-icon.png">
+    <link href="./src/css/index.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Starts header -->
+    <header class="header">
+
+        <!-- Burger menu only for mobile devices -->
+        <button id="menu-toggle">☰</button>
+
+        <!-- Navigation menu -->
+        <nav id="nav-menu">
+            <a href="#">Inicio</a>
+            <a href="#about-me">Sobre mí</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contacts">Contactos</a>
+            <a href="./src/views/pets.html">Mascotas</a>
+        </nav>
+
+    </header>
+    <!-- Ends header -->
+
+    <!-- Starts main -->
+    <main>
+
+        <!-- Starts about me section -->
+        <section id="about-me">
+
+            <h1 class="main-title">DANILO DORIA</h1>
+
+            <p class="presentation">
+                Soy <span>desarrollador web</span> enfocado en crear sitios modernos, funcionales y
+                atractivos.<br>Siempre en constante
+                <span>aprendizaje </span>para ofrecer las mejores soluciones digitales, mi meta es especializarme en
+                <span>desarrollo móvil y Javascript.</span>
+            </p>
+
+            <div class="profile-container">
+                <img class="profile-photo" src="./public/images/DaniloDoria-Photo.jpg"
+                    alt="Foto de perfil de Danilo Doria" class="profile-image">
+            </div>
+
+        </section>
+        <!-- Ends about me section -->
+
+        <hr class="light-bar">
+
+        <!-- Starts projects section -->
+        <section id="projects">
+
+            <h2 class="title">Proyectos</h2>
+
+            <div class="projects-grid">
+                <a href="https://github.com/Danilo-Doria/PortfolioV2" target="_blank" class="project-card">
+                    <img src="./public/images/project-1.png" alt="Vista previa del proyecto Portafolio Final">
+
+                    <div class="card-content">
+                        <h3>Portafolio Final</h3>
+                        <p>
+                            Portafolio desarrollado con HTML, CSS/Tailwind y JavaScript.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Danilo-Doria/Portfolio" target="_blank" class="project-card">
+                    <img src="./public/images/project-2.png" alt="Vista previa del proyecto Portafolio V1">
+
+                    <div class="card-content">
+                        <h3>Portafolio V1</h3>
+                        <p>
+                            Mi primer portafolio desarrollado con HTML, CSS y JavaScript puros.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Danilo-Doria/BasicInventorySystem" target="_blank" class="project-card">
+                    <img src="./public/images/project-3.png"
+                        alt="Vista previa del proyecto Sistema Basico de Inventarios">
+
+                    <div class="card-content">
+                        <h3>Sistema Basico de Inventarios</h3>
+                        <p>
+                            Proyecto de sistema de inventarios desarrollado con python.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Danilo-Doria/SimuladorDeCajeroAutomaticoBasico" target="_blank"
+                    class="project-card">
+                    <img src="./public/images/project-4.jpg"
+                        alt="Vista previa del proyecto Simulador de Cajero Automático">
+
+                    <div class="card-content">
+                        <h3>Simulador de Cajero Automático</h3>
+                        <p>
+                            Proyecto de simulador de cajero automático desarrollado con python.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Danilo-Doria" target="_blank" class="project-card">
+                    <img src="./public/images/project-5.webp"
+                        alt="Vista previa del proyecto Sistema de Gestion de Estudiantes con Persistencia de Datos">
+
+                    <div class="card-content">
+                        <h3>Sistema de Gestion de Estudiantes con Persistencia de Datos</h3>
+                        <p>
+                            Proyecto de sistema de gestion de estudiantes desarrollado con python.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Danilo-Doria" target="_blank" class="project-card">
+                    <img src="./public/images/project-6.webp"
+                        alt="Vista previa del proyecto Sistema de Registro Basico de Empleados">
+
+                    <div class="card-content">
+                        <h3>Sistema de Registro Basico de Empleados</h3>
+                        <p>
+                            Proyecto de sistema de registro de empleados desarrollado con python.
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+        <!-- Ends projects section -->
+
+        <hr class="light-bar">
+
+        <!-- Starts contacts section -->
+        <section id="contacts">
+
+            <h2 class="title">Contacto</h2>
+            <form class="contact-form">
+                <label for="name" class="contact-title-form">Nombre:</label>
+                <input type="text" id="name" name="name" required autocomplete="off">
+
+                <label for="email" class="contact-title-form">Correo:</label>
+                <input type="email" id="email" name="email" required autocomplete="off">
+
+                <input type="submit" value="submit" class="submit">
+            </form>
+
+        </section>
+        <!-- Ends contacts section -->
+
+    </main>
+    <!-- Ends main -->
+
+    <!-- Starts footer -->
+    <footer class="footer">
+
+        <address class="address">
+
+            <a href="https://github.com/Danilo-Doria" target="_blank">
+                <img src="./public/icons/github-icon.svg" alt="GitHub" />
+            </a>
+
+            <a href="https://www.linkedin.com/in/danilodd/" target="_blank">
+                <img src="./public/icons/linkedin-icon.svg" alt="Linkedin" />
+            </a>
+
+            <a href="mailto:danilodoria519@gmail.com">
+                <img src="./public/icons/email-icon.svg" alt="Correo electrónico" />
+            </a>
+
+        </address>
+        <p class="footer-copyright">© 2026 Danilo Doria — Todos los derechos reservados.</p>
+
+    </footer>
+    <!-- Ends footer -->
+
+    <!-- bubbles background effect -->
+    <div class="bubbles">
+        <span style="left:5%; animation-duration: 6s;"></span>
+        <span style="left:10%; animation-duration: 8s;"></span>
+        <span style="left:15%; animation-duration: 17s;"></span>
+        <span style="left:20%; animation-duration: 10s;"></span>
+        <span style="left:25%; animation-duration: 20s;"></span>
+        <span style="left:30%; animation-duration: 9s;"></span>
+        <span style="left:35%; animation-duration: 13s;"></span>
+        <span style="left:40%; animation-duration: 7s;"></span>
+        <span style="left:45%; animation-duration: 12s;"></span>
+        <span style="left:50%; animation-duration: 11s;"></span>
+        <span style="left:55%; animation-duration: 12s;"></span>
+        <span style="left:60%; animation-duration: 10s;"></span>
+        <span style="left:65%; animation-duration: 14s;"></span>
+        <span style="left:70%; animation-duration: 13s;"></span>
+        <span style="left:75%; animation-duration: 8s;"></span>
+        <span style="left:80%; animation-duration: 6s;"></span>
+        <span style="left:85%; animation-duration: 9s;"></span>
+        <span style="left:90%; animation-duration: 14s;"></span>
+        <span style="left:95%; animation-duration: 20s;"></span>
+    </div>
+
+    <!-- Link to js file -->
+    <script src="./src/js/script.js"></script>
+</body>
+
+</html>
