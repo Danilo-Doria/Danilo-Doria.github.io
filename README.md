@@ -42,34 +42,20 @@ The objective is to create a responsive website that includes:
 .
 ├── index.html
 ├── LICENSE
-├── public
-│   ├── icons
-│   │   ├── email-icon.svg
-│   │   ├── fav-icon.png
-│   │   ├── github-icon.svg
-│   │   └── linkedin-icon.svg
-│   └── images
-│       ├── DaniloDoria-Photo.jpg
-│       ├── perro2.webp
-│       ├── perro3.jpg
-│       ├── perro.avif
-│       ├── preview-1.png
-│       ├── preview-2.png
-│       ├── project-1.png
-│       ├── project-2.png
-│       ├── project-3.png
-│       ├── project-4.png
-│       ├── project-5.png
-│       └── project-6.png
+├── public/
+│   ├── icons/
+│   └── images/
 ├── README.md
-└── src
-    ├── css
+└── src/
+    ├── css/
     │   ├── global_styles.css
     │   ├── index.css
     │   └── pets.css
-    ├── script.js
-    └── views
+    ├── js/
+    │   └── script.js
+    └── views/
         └── pets.html
+    
 ```
 
 ## 🖼 Preview

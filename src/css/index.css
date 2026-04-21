@@ -1,3 +1,7 @@
+@import url(./global_styles.css);
+
+/* Mobile First */
+
 /* About me section */
 #about-me {
     display: grid;
@@ -16,6 +20,7 @@
 
 .presentation {
     line-height: 1.6;
+    justify-self: start;
 }
 
 .profile-container {
@@ -66,7 +71,7 @@
 
 .project-card img {
     width: 100%;
-    height: 128px;
+    max-height: 20vw;
     object-fit: cover;
 }
 
@@ -150,6 +155,8 @@
 }
 
 /* Media queries */
+
+/* tablets screen size */
 @media (min-width: 768px) {
     .main-title {
         font-size: 3rem;
@@ -162,7 +169,7 @@
     .profile-photo {
         max-width: 60%;
     }
-    
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -177,6 +184,7 @@
     }
 }
 
+/* laptops screen size */
 @media (min-width: 1024px) {
     #about-me {
         grid-template-columns: 2fr 1fr;
@@ -209,5 +217,9 @@
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
         max-width: 80%;
+    }
+
+    .project-card img {
+        max-height: 10vw;
     }
 }
