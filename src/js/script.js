@@ -9,3 +9,9 @@ const menu = document.getElementById("nav-menu");
 button.addEventListener("click", () => {
     menu.classList.toggle("active");
 });
+
+const saludo = document.getElementById("message");
+
+saludo.addEventListener("click", () => {
+    alert("Hola Bienvenido!!")
+})
