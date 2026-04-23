@@ -4,14 +4,16 @@ const button = document.getElementById("menu-toggle");
 // add the id "mav-menu" in a constant called menu
 const menu = document.getElementById("nav-menu");
 
-// Whe the burger button is clicked
+// When the burger button is clicked
 // toggle the "active" class on the menu to show or hide it
 button.addEventListener("click", () => {
     menu.classList.toggle("active");
 });
 
-const saludo = document.getElementById("message");
+// add the id "message" in a constant called greeting
+const greeting = document.getElementById("message");
 
-saludo.addEventListener("click", () => {
+// When the buttom is clicked
+greeting.addEventListener("click", () => {
     alert("Hola Bienvenido!!")
 })
