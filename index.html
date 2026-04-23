@@ -15,8 +15,6 @@
 
 <body>
 
-    <button id="message">Hola!</button>
-
     <!-- Starts header -->
     <header class="header">
 
@@ -29,11 +27,15 @@
             <a href="#about-me">Sobre mí</a>
             <a href="#projects">Proyectos</a>
             <a href="#contacts">Contactos</a>
+            <a href="./public/docs/Currículum Danilo Doria.pdf" target="_blank">Descargar CV</a>
             <a href="./src/views/pets.html">Mascotas</a>
         </nav>
 
     </header>
     <!-- Ends header -->
+
+    <!-- Alert Button -->
+    <button id="message">Hola!</button>
 
     <!-- Starts main -->
     <main>
@@ -152,8 +154,14 @@
                 <label for="name" class="contact-title-form">Nombre:</label>
                 <input type="text" id="name" name="name" required autocomplete="off">
 
+                <label for="last-name" class="contact-title-form">Apellido:</label>
+                <input type="text" id="last-name" name="last-name" required autocomplete="off">
+
                 <label for="email" class="contact-title-form">Correo:</label>
                 <input type="email" id="email" name="email" required autocomplete="off">
+
+                <label for="phone" class="contact-title-form">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+57 359 323 4866" autocomplete="off">
 
                 <input type="submit" value="submit" class="submit">
             </form>

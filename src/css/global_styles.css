@@ -83,16 +83,17 @@ body {
     color: var(--color-text);
     background-color: var(--color-bg-2);
     border: 1px solid var(--color-hover);
+    outline: none;
+    cursor: pointer;
     transition: transform 0.3s ease;
     z-index: 1;
 }
 
 #message:hover,
-#message:hover {
+#message:focus {
     transform: scale(1.05);
     box-shadow: 0 0 10px var(--color-hover-2);
 }
-
 
 a {
     text-decoration: none;

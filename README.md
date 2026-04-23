@@ -43,6 +43,7 @@ The objective is to create a responsive website that includes:
 ├── index.html
 ├── LICENSE
 ├── public/
+│   ├── docs/
 │   ├── icons/
 │   └── images/
 ├── README.md
@@ -55,6 +56,7 @@ The objective is to create a responsive website that includes:
     │   └── script.js
     └── views/
         └── pets.html
+
     
 ```
 
