@@ -10,6 +10,14 @@ button.addEventListener("click", () => {
     menu.classList.toggle("active");
 });
 
+const links = menu.querySelectorAll("#nav-menu a")
+
+links.forEach((link) => {
+    link.addEventListener('click', () => {
+        menu.classList.toggle("active")
+    })
+})
+
 // add the id "message" in a constant called greeting
 const greeting = document.getElementById("message");
 
