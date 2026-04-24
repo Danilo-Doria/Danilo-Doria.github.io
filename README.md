@@ -51,13 +51,12 @@ The objective is to create a responsive website that includes:
     ├── css/
     │   ├── global_styles.css
     │   ├── index.css
-    │   └── pets.css
+    │   ├── pets.css
+    │   └── style.min.css
     ├── js/
     │   └── script.js
     └── views/
         └── pets.html
-
-    
 ```
 
 ## 🖼 Preview

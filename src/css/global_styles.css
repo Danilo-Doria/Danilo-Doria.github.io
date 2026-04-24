@@ -133,7 +133,8 @@ a {
 
 /* h1 titles */
 .main-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    text-align: center;
 }
 
 /* h2 titles */
@@ -273,6 +274,12 @@ span {
 
     .light-bar {
         display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-title {
+        font-size: 5rem;
     }
 }
 

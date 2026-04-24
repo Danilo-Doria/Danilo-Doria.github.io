@@ -4,12 +4,7 @@
 
 /* Pets section */
 #pets {
-    padding: 5rem 0 0 0;
-}
-
-.main-title {
-    text-align: center;
-    margin: 5rem 0;
+    padding: 10rem 0 0 0;
 }
 
 .gallery-layout {
@@ -17,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0rem 2rem 5rem 2rem;
+    padding: 5rem 2rem;
     gap: 20px;
 }
 
@@ -110,11 +105,6 @@
 
 /* laptops screen size */
 @media (min-width: 1024px) {
-    .main-title {
-        text-align: center;
-        margin: 3rem 0;
-    }
-
     .gallery-layout {
         padding: 3rem 10rem;
     }
