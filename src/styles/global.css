@@ -6,3 +6,58 @@
   --color-text1: #CFCFCF;
   --color-text2: #B6B6B6;
 }
+
+.slider-wrapper {
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+}
+
+@keyframes marquee-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* @keyframes marquee-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+} */
+
+.animate-marquee-left {
+    display: flex;
+    width: max-content;
+    animation: marquee-left 25s linear infinite;
+    will-change: transform;
+}
+
+/* .animate-marquee-right {
+    display: flex;
+    width: max-content;
+    animation: marquee-right 20s linear infinite;
+    will-change: transform;
+} */
+
+.animate-marquee-left:hover
+/* .animate-marquee-right:hover*/ {
+    animation-play-state: paused;
+}
