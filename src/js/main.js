@@ -1,3 +1,5 @@
+import "../styles/global.css"
+
 // ELEMENTOS
 const btn = document.getElementById('menu-btn');
 const sidebar = document.getElementById('sidebar');
