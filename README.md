@@ -33,9 +33,9 @@ The main goal of this project is to introduce me into the world of web developme
 ├── README.md
 ├── src/
 │   ├── css/
-│   │   └── style.css
+│   │   └── global.css
 │   └── js/
-│       └── script.js
+│       └── main.js
 └── vite.config.js
 ```
 
