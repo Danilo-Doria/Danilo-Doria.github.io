@@ -46,14 +46,14 @@
 .animate-marquee-left {
     display: flex;
     width: max-content;
-    animation: marquee-left 25s linear infinite;
+    animation: marquee-left 40s linear infinite;
     will-change: transform;
 }
 
 /* .animate-marquee-right {
     display: flex;
     width: max-content;
-    animation: marquee-right 20s linear infinite;
+    animation: marquee-right 40s linear infinite;
     will-change: transform;
 } */
 
