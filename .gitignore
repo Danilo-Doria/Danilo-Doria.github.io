@@ -141,4 +141,9 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+# Agent files
+.agent/
+AGENTS.md
+agents.md
+
 # End of https://www.toptal.com/developers/gitignore/api/node

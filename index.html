@@ -10,10 +10,18 @@
     <meta name="author" content="Danilo Doria">
     <meta name="description" content="Danilo Doria is a web developer from Colombia focused on JavaScript, accessible websites, and useful digital products. Explore his projects and experience.">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#080029">
+    <meta name="theme-color" content="#07031e">
 
     <link rel="canonical" href="https://danilo-doria.github.io/">
     <link rel="icon" href="/images/page-logo.webp" type="image/webp">
+
+    <!-- Google Fonts: DM Sans (body), Instrument Serif (editorial headings), JetBrains Mono (code/badges) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+    <!-- Devicon Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
     <!-- Open Graph (Facebook, LinkedIn, Discord) -->
     <meta property="og:site_name" content="Danilo Doria Portfolio">
@@ -50,7 +58,7 @@
                 "address": { "@type": "Country", "name": "Colombia" },
                 "sameAs": [
                     "https://github.com/Danilo-Doria",
-                    "https://www.linkedin.com/in/danilodd/"
+                    "https://www.linkedin.com/in/danilo-doria-diaz/"
                 ],
                 "knowsAbout": [
                     "JavaScript",
@@ -59,6 +67,10 @@
                     "Tailwind CSS",
                     "Python",
                     "Node.js",
+                    "Angular",
+                    "Spring Boot",
+                    "PostgreSQL",
+                    "MySQL",
                     "Web Development"
                 ]
             }
@@ -66,22 +78,15 @@
     </script>
 </head>
 
-<body class="bg-linear-to-r from-bg1 via-bg1 to-bg1 text-text2 px-2 font-mono md:px-20 lg:px-30 xl:px-40 2xl:px-50">
-
-<!-- Enlace de salto accesible para usuarios de teclado y lectores de pantalla -->
-<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-span focus:text-bg1 focus:font-bold focus:rounded-md">
-    Skip to main content
-</a>
+<body class="bg-bg1 text-text2 font-sans antialiased min-h-screen selection:bg-span selection:text-bg1 relative overflow-x-hidden">
 
 <header>
     <!-- Navbar mobile -->
-    <div id="navbar-mobile" class="fixed top-0 right-0 w-full h-20 z-50 bg-bg1/70 backdrop-blur-sm transition-all duration-500 ease-out">
-        <a href="#main-content" aria-label="Danilo Doria - Back to main content" class="absolute left-10 top-5 outline-none md:hidden z-50 group">
+    <div id="navbar-mobile" class="fixed top-0 right-0 w-full h-20 z-50 bg-bg1/70 backdrop-blur-sm transition-all duration-500 ease-out flex items-center justify-between px-6 md:hidden">
+        <a href="#main-content" aria-label="Danilo Doria - Back to main content" class="outline-none group">
             <div class="relative w-14 h-14">
                 <img class="absolute w-full h-full z-10 transition-transform duration-300 group-hover:-translate-1 group-active:-translate-1 group-focus:-translate-1"
                      src="/images/page-logo.webp" alt="Danilo Doria logo" width="56" height="56">
-
-                <!-- Sombra puramente decorativa -->
                 <img class="absolute w-full h-full z-0" src="/images/page-logo-shadow.webp" alt="" aria-hidden="true" width="56" height="56">
             </div>
         </a>
@@ -93,7 +98,7 @@
                 aria-expanded="false"
                 aria-controls="sidebar"
                 aria-haspopup="true"
-                class="absolute top-8 right-10 w-9 h-8 flex flex-col justify-between p-2 z-50 md:hidden group focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
+                class="w-9 h-8 flex flex-col justify-between p-2 z-50 group focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
             <span class="block w-full h-0.5 bg-span transition-all duration-300 group-[.open]:rotate-45 group-[.open]:translate-y-1"></span>
             <span class="block w-full h-0.5 bg-span transition-all duration-300 group-[.open]:hidden"></span>
             <span class="block w-full h-0.5 bg-span transition-all duration-300 group-[.open]:-rotate-45 group-[.open]:-translate-y-2.5"></span>
@@ -101,7 +106,7 @@
     </div>
 
     <!-- Navbar para desktop -->
-    <nav id="navbar" aria-label="Main Navigation" class="fixed w-full top-0 right-10 p-6 text-end m-auto space-x-5 text-xs hidden md:block transition-all duration-500 ease-out z-50 -translate-x-10 opacity-0 bg-bg1/70 backdrop-blur-sm">
+    <nav id="navbar" aria-label="Main Navigation" class="fixed w-full top-0 right-0 p-6 text-end m-auto space-x-5 text-xs hidden md:block transition-all duration-500 ease-out z-50 -translate-x-10 opacity-0 bg-bg1/70 backdrop-blur-sm">
         <a href="#main-content" aria-label="Danilo Doria - Back to main content" class="fixed left-24 top-5 outline-none group">
             <div class="relative w-14 h-14">
                 <img class="absolute w-full h-full z-10 transition-transform duration-300 group-hover:-translate-1 group-active:-translate-1 group-focus:-translate-1"
@@ -110,38 +115,38 @@
             </div>
         </a>
 
-        <a href="#about" class="hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
+        <a href="#about" class="hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out font-mono">
             <span class="text-span" aria-hidden="true">01. </span>About
         </a>
-        <a href="#experience" class="hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
+        <a href="#experience" class="hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out font-mono">
             <span class="text-span" aria-hidden="true">02. </span>Experience
         </a>
-        <a href="#projects" class="hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
+        <a href="#projects" class="hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out font-mono">
             <span class="text-span" aria-hidden="true">03. </span>Projects
         </a>
-        <a href="#contact" class="hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
+        <a href="#contact" class="hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out font-mono">
             <span class="text-span" aria-hidden="true">04. </span>Contact
         </a>
-        <a class="inline-block text-span border py-3 px-4 rounded-lg transform transition duration-300 hover:-translate-1 shadow-span hover:shadow-[3px_3px] focus:-translate-1 focus:shadow-[3px_3px] outline-none"
+        <a class="inline-block text-span border py-3 px-4 rounded-lg transform transition duration-300 hover:-translate-1 shadow-span hover:shadow-[3px_3px] focus:-translate-1 focus:shadow-[3px_3px] outline-none font-mono"
            href="/docs/curriculum-Danilo-Doria.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume (opens in a new tab)">Resume
         </a>
     </nav>
 
     <!-- Sidebar para móvil -->
-    <nav id="sidebar" aria-label="Mobile Navigation" inert class="fixed top-0 right-0 h-full w-1/2 bg-bg1 z-40 transform translate-x-full transition-transform duration-300 invisible p-20 pr-40 space-y-10 text-center">
-        <a href="#about" class="block text-sm active:outline-span active:outline-1 focus:outline-dotted focus:outline-span focus:outline-2 transition-all duration-300 ease-out">
+    <nav id="sidebar" aria-label="Mobile Navigation" inert class="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-bg1 z-40 transform translate-x-full transition-transform duration-300 invisible p-8 pt-28 flex flex-col items-center justify-center space-y-8 text-center font-mono border-l border-border/40">
+        <a href="#about" class="inline-block py-2.5 px-6 text-sm hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-4 transition-all duration-300 ease-out">
             <span class="text-span" aria-hidden="true">01. </span>About
         </a>
-        <a href="#experience" class="block text-sm active:outline-span active:outline-1 focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
+        <a href="#experience" class="inline-block py-2.5 px-6 text-sm hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-4 transition-all duration-300 ease-out">
             <span class="text-span" aria-hidden="true">02. </span>Experience
         </a>
-        <a href="#projects" class="block text-sm active:outline-span active:outline-1 focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
+        <a href="#projects" class="inline-block py-2.5 px-6 text-sm hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-4 transition-all duration-300 ease-out">
             <span class="text-span" aria-hidden="true">03. </span>Projects
         </a>
-        <a href="#contact" class="block text-sm active:outline-span active:outline-1 focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
+        <a href="#contact" class="inline-block py-2.5 px-6 text-sm hover:text-span focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-4 transition-all duration-300 ease-out">
             <span class="text-span" aria-hidden="true">04. </span>Contact
         </a>
-        <a href="/docs/curriculum-Danilo-Doria.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume (opens in a new tab)" class="inline-block text-span border py-3 px-4 rounded-lg transform transition duration-300 focus:-translate-1 focus:shadow-[3px_3px] outline-none">Resume
+        <a href="/docs/curriculum-Danilo-Doria.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume (opens in a new tab)" class="inline-block text-span border py-3 px-8 rounded-lg transform transition duration-300 hover:-translate-1 shadow-span hover:shadow-[3px_3px] focus:-translate-1 focus:shadow-[3px_3px] outline-none mt-2">Resume
         </a>
     </nav>
 
@@ -150,22 +155,23 @@
 </header>
 
 <main id="main-content">
-    <!-- Enlaces laterales -->
-    <aside aria-label="Direct contact" id="left-bar" class="hidden fixed left-0 bottom-0 flex-col items-center -translate-x-10 space-y-28 md:flex opacity-0 translate-y-10 transition-all duration-1200">
-        <a href="mailto:danilodoria519@gmail.com" aria-label="Send email to danilodoria519@gmail.com" class="text-sm transform rotate-90 hover:text-span hover:-translate-y-1 focus:text-span focus:-translate-y-1 focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
+    <!-- Enlaces laterales fijos (desktop) -->
+    <aside aria-label="Direct contact" id="left-bar" class="hidden fixed left-0 bottom-0 flex-col items-center -translate-x-10 space-y-28 md:flex opacity-0 translate-y-10 transition-all duration-1200 z-30">
+        <a href="mailto:danilodoria519@gmail.com" aria-label="Send email to danilodoria519@gmail.com"
+           class="text-sm font-mono transform rotate-90 hover:text-span hover:-translate-y-1 focus:text-span focus:-translate-y-1 focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out origin-center">
             danilodoria519@gmail.com
         </a>
         <div class="w-px h-25 bg-white" aria-hidden="true"></div>
     </aside>
 
-    <aside aria-label="Social media profiles" id="right-bar" class="hidden fixed right-0 bottom-0 flex-col items-center -translate-x-10 space-y-8 md:flex opacity-0 translate-y-10 transition-all duration-1200">
+    <aside aria-label="Social media profiles" id="right-bar" class="hidden fixed right-0 bottom-0 flex-col items-center -translate-x-10 space-y-8 md:flex opacity-0 translate-y-10 transition-all duration-1200 z-30">
         <a href="https://github.com/Danilo-Doria" rel="noopener noreferrer" target="_blank" aria-label="Danilo Doria on GitHub (opens in a new tab)"
            class="group hover:-translate-y-1 focus:-translate-y-1 focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
             <img class="w-6 hover:content-[url('/icons/github-hover-icon.svg')] group-focus:content-[url('/icons/github-hover-icon.svg')]"
                  src="/icons/github-icon.svg" alt="" aria-hidden="true" width="24" height="24">
         </a>
 
-        <a href="https://www.linkedin.com/in/danilodd/" rel="noopener noreferrer" target="_blank" aria-label="Danilo Doria on LinkedIn (opens in a new tab)"
+        <a href="https://www.linkedin.com/in/danilo-doria-diaz/" rel="noopener noreferrer" target="_blank" aria-label="Danilo Doria on LinkedIn (opens in a new tab)"
            class="group hover:-translate-y-1 focus:-translate-y-1 focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
             <img class="w-5 hover:content-[url('/icons/linkedin-hover-icon.svg')] group-focus:content-[url('/icons/linkedin-hover-icon.svg')]"
                  src="/icons/linkedin-icon.svg" alt="" aria-hidden="true" width="20" height="20">
@@ -174,191 +180,481 @@
         <div class="w-px h-25 bg-white" aria-hidden="true"></div>
     </aside>
 
-    <!-- Presentación -->
-    <section id="presentation" aria-labelledby="hero-title" class="mt-40 md:mt-55 mx-10">
-        <p class="text-span text-md mb-5 lg:text-lg xl:text-2xl">Hi, my name is</p>
-        <h1 id="hero-title" class="text-text1 text-5xl mb-7 lg:text-6xl xl:text-7xl font-extrabold">Danilo Doria</h1>
-        <p class="leading-6 text-md w-full sm:w-3/4 lg:text-sm xl:text-lg lg:leading-7 xl:leading-9">
-            I'm a <span class="text-span">web developer</span> focused on creating modern,
-            functional, and attractive websites,
-            always constantly <span class="text-span">learning</span> to offer the best digital solutions.
-            My goal is to specialize in <span class="text-span">mobile development and JavaScript.</span>
-        </p>
-    </section>
+    <div class="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12">
+        <!-- Presentación / Hero -->
+        <section id="presentation" aria-labelledby="hero-title" class="mt-40 md:mt-55 mx-4 sm:mx-10">
+            <p class="text-span font-mono text-md mb-5 lg:text-lg xl:text-2xl">Hi, my name is</p>
+            <h1 id="hero-title" class="text-text1 text-5xl mb-7 lg:text-6xl xl:text-7xl font-extrabold font-serif">Danilo Doria</h1>
+            <p class="leading-6 text-md w-full sm:w-3/4 lg:text-sm xl:text-lg lg:leading-7 xl:leading-9 mb-10">
+                I'm a <span class="text-span">web developer</span> focused on creating modern,
+                functional, and attractive websites,
+                always constantly <span class="text-span">learning</span> to offer the best digital solutions.
+                My goal is to specialize in <span class="text-span">mobile development and JavaScript.</span>
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="#projects"
+                   class="inline-block text-span border py-3 px-5 rounded-lg transform transition duration-300 hover:-translate-1 shadow-span hover:shadow-[3px_3px] focus:-translate-1 focus:shadow-[3px_3px] outline-none font-mono text-sm">
+                    View My Work
+                </a>
+            </div>
+        </section>
 
-    <!-- About section -->
-    <section id="about" aria-labelledby="about-title" class="grid grid-cols-1 gap-10 mt-40 mx-10 md:grid-cols-3 scroll-m-30 md:mt-48">
-        <h2 id="about-title" class="text-md text-lg lg:text-xl xl:text-2xl">
-            <span class="text-span flex-col" aria-hidden="true">01. </span>About Me
-        </h2>
-        <p class="pr-5 leading-6 text-md w-full sm:w-4/6 md:w-full md:col-span-2 lg:text-sm xl:text-lg lg:leading-7 xl:leading-9">
-            My name is Danilo Andrés Doria Díaz, I am 24 years old and I am from Colombia. Since I was a child,
-            I have always been interested in everything related to technology, computing, and video games.
-            You could say that my first contact with programming was at school, where I saw HTML for the first time.
-            Later on in college, while studying industrial engineering, I entered the world of programming
-            with C++ and later took a course in data cleaning and visualization with Python and Power BI.<br><br>
-            I am currently continuing to learn and improve my skills as a web developer in order to become competent
-            and be able to bring my knowledge and quality to my work. My main goal is to become a full stack developer
-            specializing in JavaScript.
-        </p>
+        <!-- About section -->
+        <section id="about" aria-labelledby="about-title" class="grid grid-cols-1 gap-10 mt-40 mx-4 sm:mx-10 md:grid-cols-3 scroll-m-30 md:mt-48">
+            <h2 id="about-title" class="text-md text-lg lg:text-xl xl:text-2xl font-serif text-text1">
+                <span class="text-span font-mono" aria-hidden="true">01. </span>About Me
+            </h2>
+            <p class="pr-5 leading-6 text-md w-full sm:w-4/6 md:w-full md:col-span-2 lg:text-sm xl:text-lg lg:leading-7 xl:leading-9">
+                My name is Danilo Andrés Doria Díaz, I am 24 years old and I am from Colombia. Since I was a child,
+                I have always been interested in everything related to technology, computing, and video games.
+                You could say that my first contact with programming was at school, where I saw HTML for the first time.
+                Later on in college, while studying industrial engineering, I entered the world of programming
+                with C++ and later took a course in data cleaning and visualization with Python and Power BI.<br><br>
+                I am currently continuing to learn and improve my skills as a web developer in order to become competent
+                and be able to bring my knowledge and quality to my work. My main goal is to become a full stack developer
+                specializing in JavaScript.
+            </p>
 
-        <div class="relative w-62 justify-self-center md:col-start-3 md:row-start-1 row-span-2 self-center md:w-4/3 lg:max-w-xs">
-            <img src="/images/DaniloDoria-Photo.webp" alt="Danilo Doria portrait" width="400" height="400" loading="lazy"
-                 class="relative z-1 w-full h-full transform transition duration-300 hover:-translate-1 rounded-xs active:-translate-1">
-            <div class="absolute top-2 left-2 w-full h-full bg-transparent outline-span outline-3 z-0 rounded-xs" aria-hidden="true"></div>
-        </div>
-    </section>
+            <div class="relative w-62 justify-self-center md:col-start-3 md:row-start-1 row-span-2 self-center md:w-4/3 lg:max-w-xs">
+                <img src="/images/DaniloDoria-Photo3.webp" alt="Danilo Doria portrait" width="400" height="400" loading="lazy"
+                     class="relative z-1 w-full h-full transform transition duration-300 hover:-translate-1 rounded-xs active:-translate-1 object-cover">
+                <div class="absolute top-2 left-2 w-full h-full bg-transparent outline-span outline-3 z-0 rounded-xs" aria-hidden="true"></div>
+            </div>
+        </section>
 
-    <!-- Experience section -->
-    <section id="experience" aria-labelledby="experience-title" class="mt-30 scroll-m-30">
-        <h2 id="experience-title" class="mx-10 text-lg mb-4 lg:text-xl xl:text-2xl">
-            <span class="text-span flex-col" aria-hidden="true">02. </span>My Experience
-        </h2>
-        <h3 class="mx-10 mb-20 text-md lg:text-lg xl:text-xl">Technical skills</h3>
+        <!-- Experience section -->
+        <section id="experience" aria-labelledby="experience-title" class="mt-40 scroll-m-30">
+            <h2 id="experience-title" class="mx-4 sm:mx-10 text-lg mb-4 lg:text-xl xl:text-2xl font-serif text-text1">
+                <span class="text-span font-mono" aria-hidden="true">02. </span>My Experience
+            </h2>
+            <h3 class="mx-4 sm:mx-10 mb-12 text-md lg:text-lg xl:text-xl font-mono text-text2">Technical skills</h3>
 
-        <div class="slider-wrapper overflow-hidden w-full" role="group" aria-label="Technologies and tools">
-            <div class="flex animate-marquee-left gap-20 pr-20">
-                <div class="flex items-center gap-20 shrink-0">
-                    <img src="/images/html-logo.webp" alt="HTML5" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/css-logo.webp" alt="CSS3" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/javascript-logo.webp" alt="JavaScript" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/git-logo.webp" alt="Git" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/tailwind-logo.webp" alt="Tailwind CSS" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/java-logo.svg" alt="Java" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/html-logo.webp" alt="HTML5" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/css-logo.webp" alt="CSS3" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/javascript-logo.webp" alt="JavaScript" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/git-logo.webp" alt="Git" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/tailwind-logo.webp" alt="Tailwind CSS" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/java-logo.svg" alt="Java" class="h-20" width="80" height="80" loading="lazy">
+            <!-- Carruseles de habilidades técnicas -->
+            <div class="space-y-3.5 my-6">
+                <!-- Carrusel 1: Dirección hacia la izquierda -->
+                <div class="slider-wrapper overflow-hidden w-full py-1.5" role="region" aria-label="Frontend and tools skills">
+                    <div class="animate-marquee-left flex items-center gap-3 pr-3">
+                        <!-- Primera tanda accesible -->
+                        <div class="flex items-center gap-3 shrink-0">
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-javascript-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                JavaScript
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-angular-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Angular
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-html5-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                HTML5
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-css3-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                CSS3
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-tailwindcss-original colored text-base shrink-0" aria-hidden="true"></i>
+                                Tailwind CSS
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-vitejs-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Vite
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-nodejs-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Node.js
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-python-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Python
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-git-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Git
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-github-original text-base shrink-0 text-text1" aria-hidden="true"></i>
+                                GitHub
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-linux-plain text-base shrink-0 text-amber-400" aria-hidden="true"></i>
+                                Linux
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-vscode-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                VS Code
+                            </span>
+                        </div>
+
+                        <!-- Tanda duplicada para efecto de bucle continuo -->
+                        <div class="flex items-center gap-3 shrink-0" aria-hidden="true">
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-javascript-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                JavaScript
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-angular-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Angular
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-html5-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                HTML5
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-css3-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                CSS3
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-tailwindcss-original colored text-base shrink-0" aria-hidden="true"></i>
+                                Tailwind CSS
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-vitejs-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Vite
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-nodejs-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Node.js
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-python-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Python
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-git-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Git
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-github-original text-base shrink-0 text-text1" aria-hidden="true"></i>
+                                GitHub
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-linux-plain text-base shrink-0 text-amber-400" aria-hidden="true"></i>
+                                Linux
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-vscode-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                VS Code
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Fila duplicada para efecto de bucle infinito (oculta para lectores de pantalla) -->
-                <div class="flex items-center gap-20 shrink-0" aria-hidden="true">
-                    <img src="/images/html-logo.webp" alt="" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/css-logo.webp" alt="" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/javascript-logo.webp" alt="" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/git-logo.webp" alt="" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/tailwind-logo.webp" alt="" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/java-logo.svg" alt="" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/html-logo.webp" alt="" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/css-logo.webp" alt="" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/javascript-logo.webp" alt="" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/git-logo.webp" alt="" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/tailwind-logo.webp" alt="" class="h-20" width="80" height="80" loading="lazy">
-                    <img src="/images/java-logo.svg" alt="" class="h-20" width="80" height="80" loading="lazy">
+                <!-- Carrusel 2: Dirección contraria (hacia la derecha) -->
+                <div class="slider-wrapper overflow-hidden w-full py-1.5" role="region" aria-label="Backend, database, and devops skills">
+                    <div class="animate-marquee-right flex items-center gap-3 pr-3">
+                        <!-- Primera tanda accesible -->
+                        <div class="flex items-center gap-3 shrink-0">
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-java-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Java
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-spring-original colored text-base shrink-0" aria-hidden="true"></i>
+                                Spring Boot
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-spring-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Spring Security
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-spring-original colored text-base shrink-0" aria-hidden="true"></i>
+                                Spring Data JPA
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-hibernate-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Hibernate
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-postgresql-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                PostgreSQL
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-mysql-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                MySQL
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-docker-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Docker
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-postman-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Postman
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-maven-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Maven
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-gradle-original text-base shrink-0 text-cyan-400" aria-hidden="true"></i>
+                                Gradle
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-intellij-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                IntelliJ IDEA
+                            </span>
+                        </div>
+
+                        <!-- Tanda duplicada para efecto de bucle continuo -->
+                        <div class="flex items-center gap-3 shrink-0" aria-hidden="true">
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-java-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Java
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-spring-original colored text-base shrink-0" aria-hidden="true"></i>
+                                Spring Boot
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-spring-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Spring Security
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-spring-original colored text-base shrink-0" aria-hidden="true"></i>
+                                Spring Data JPA
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-hibernate-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Hibernate
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-postgresql-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                PostgreSQL
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-mysql-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                MySQL
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-docker-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Docker
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-postman-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Postman
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-maven-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                Maven
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-gradle-original text-base shrink-0 text-cyan-400" aria-hidden="true"></i>
+                                Gradle
+                            </span>
+                            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border bg-bg-card text-text1 text-sm font-mono whitespace-nowrap select-none transition-colors duration-200 hover:border-span/60 hover:text-white">
+                                <i class="devicon-intellij-plain colored text-base shrink-0" aria-hidden="true"></i>
+                                IntelliJ IDEA
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects section -->
-    <section id="projects" aria-labelledby="projects-title" class="mt-50 mx-8 md:mx-0 scroll-m-30">
-        <h2 id="projects-title" class="mx-10 mb-10 text-lg lg:text-xl xl:text-2xl">
-            <span class="text-span flex-col" aria-hidden="true">03. </span>My Projects
-        </h2>
+        <!-- Projects section -->
+        <section id="projects" aria-labelledby="projects-title" class="mt-48 scroll-m-30">
+            <h2 id="projects-title" class="mb-10 text-lg lg:text-xl xl:text-2xl font-serif text-text1">
+                <span class="text-span font-mono" aria-hidden="true">03. </span>My Projects
+            </h2>
 
-        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            <article>
-                <a href="https://github.com/Danilo-Doria/QuillAlert" target="_blank" rel="noopener noreferrer"
-                   class="block outline-none hover:scale-105 focus:outline-dotted focus:outline-span focus:scale-105 focus:outline-2 focus:outline-offset-8 active:scale-100 transition-all duration-300 ease-out">
-                    <img src="/images/project-2.webp" alt="QuillAlert project interface screenshot" width="800" height="450" loading="lazy"
-                         class="w-full h-48 object-cover rounded-lg">
-                    <div class="card-content">
-                        <h3 class="mb-1 mt-3 font-bold text-span">QuillAlert</h3>
-                        <p>
-                            QuillAlert is a digital web platform created to connect citizens with their majorship. Where users are allowed to create reports, see them and follow the report's status.
-                        </p>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+                <!-- Columna Izquierda: Vista previa del proyecto (Sticky en desktop) -->
+                <div class="lg:col-span-7 xl:col-span-8 lg:sticky lg:top-28">
+                    <div id="project-preview-card" class="bg-bg-card border border-border rounded-2xl overflow-hidden p-5 sm:p-6 shadow-sm transition-all duration-300">
+                        <!-- Barra superior estilo ventana / browser chrome -->
+                        <div class="flex items-center justify-between pb-3 mb-4 border-b border-border/70 text-xs font-mono text-text2">
+                            <div class="flex items-center gap-1.5" aria-hidden="true">
+                                <span class="w-2.5 h-2.5 rounded-full bg-border"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-border"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-span/60"></span>
+                                <span class="ml-2 text-text-muted text-[11px] hidden sm:inline">Project Preview</span>
+                            </div>
+                            <span class="text-text-muted text-[11px] font-mono">Featured Work</span>
+                        </div>
+
+                        <!-- Imagen del proyecto -->
+                        <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-bg1 border border-border/60 mb-5">
+                            <img id="project-preview-img"
+                                 src="/images/project-2.webp"
+                                 alt="QuillAlert preview"
+                                 width="800"
+                                 height="450"
+                                 class="w-full h-full object-cover transition-opacity duration-200">
+                        </div>
+
+                        <!-- Información: Título, Descripción, Badges y Link -->
+                        <div class="space-y-4">
+                            <h3 id="project-preview-title" class="font-serif text-2xl lg:text-3xl font-bold text-text1">
+                                QuillAlert
+                            </h3>
+
+                            <p id="project-preview-desc" class="text-sm lg:text-base text-text2 leading-relaxed font-sans min-h-[3.5rem]">
+                                QuillAlert is a digital web platform created to connect citizens with their majorship. Where users are allowed to create reports, see them and follow the report's status.
+                            </p>
+
+                            <div class="pt-4 border-t border-border/70 flex flex-wrap items-center justify-between gap-3">
+                                <div id="project-preview-tags" class="flex flex-wrap gap-2" aria-label="Technologies used">
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">JavaScript</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">Tailwind CSS</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">HTML</span>
+                                </div>
+
+                                <a id="project-preview-link"
+                                   href="https://github.com/Danilo-Doria/QuillAlert"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="View QuillAlert repository on GitHub (opens in a new tab)"
+                                   class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-span border transform transition duration-300 hover:-translate-1 shadow-span hover:shadow-[3px_3px] focus:-translate-1 focus:shadow-[3px_3px] outline-none font-mono text-xs">
+                                    <span>GitHub Repo</span>
+                                    <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M7 17L17 7"/><path d="M7 7h10v10"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </article>
+                </div>
 
-            <article>
-                <a href="https://github.com/Danilo-Doria/TaskFlowSPA.git" target="_blank" rel="noopener noreferrer"
-                   class="block outline-none hover:scale-105 focus:outline-dotted focus:outline-span focus:scale-105 focus:outline-2 focus:outline-offset-8 active:scale-100 transition-all duration-300 ease-out">
-                    <img src="/images/project-1.webp" alt="TaskFlow SPA task management dashboard" width="800" height="450" loading="lazy"
-                         class="w-full h-48 object-cover rounded-lg">
-                    <div class="card-content">
-                        <h3 class="mb-1 mt-3 font-bold text-span">TaskFlow (SPA)</h3>
-                        <p>
-                            Single-page task management application with roles, developed using Vite, HTML, CSS/Tailwind, JavaScript/Node, and JSON-Server.
-                        </p>
-                    </div>
-                </a>
-            </article>
+                <!-- Columna Derecha: Listado solo con nombres de proyectos -->
+                <div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-2.5" id="projects-list" role="tablist" aria-label="Projects list">
+                    <!-- Project 1-->
+                    <button type="button"
+                            role="tab"
+                            aria-selected="true"
+                            aria-controls="project-preview-card"
+                            class="project-item active group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border-2 border-span bg-bg2/90 shadow-sm outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
+                            data-img="/images/project-2.webp"
+                            data-title="QuillAlert"
+                            data-desc="QuillAlert is a digital web platform created to connect citizens with their majorship. Where users are allowed to create reports, see them and follow the report's status."
+                            data-tags="JavaScript, Tailwind CSS, HTML"
+                            data-url="https://github.com/Danilo-Doria/QuillAlert">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="project-item-number font-mono text-xs text-span shrink-0">01.</span>
+                            <span class="project-item-title font-sans font-semibold text-base text-span truncate">QuillAlert</span>
+                        </div>
+                        <svg class="w-4 h-4 text-span shrink-0 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
 
-            <article>
-                <a href="https://github.com/Danilo-Doria/SimuladorDeCajeroAutomaticoBasico" target="_blank" rel="noopener noreferrer"
-                   class="block outline-none hover:scale-105 focus:outline-dotted focus:outline-span focus:scale-105 focus:outline-2 focus:outline-offset-8 active:scale-100 transition-all duration-300 ease-out">
-                    <img src="/images/project-4.webp" alt="Advanced Inventory System dashboard" width="800" height="450" loading="lazy"
-                         class="w-full h-48 object-cover rounded-lg">
-                    <div class="card-content">
-                        <h3 class="mb-1 mt-3 font-bold text-span">Advanced Inventory System with CRUD</h3>
-                        <p>
-                            Inventory management application developed using JavaScript/Node and JSON-Server.
-                        </p>
-                    </div>
-                </a>
-            </article>
+                    <!-- Project 2 -->
+                    <button type="button"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="project-preview-card"
+                            class="project-item group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border border-border bg-bg-card hover:border-span/60 hover:bg-bg2/50 outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
+                            data-img="/images/project-1.webp"
+                            data-title="TaskFlow (SPA)"
+                            data-desc="Single-page task management application with roles, developed using Vite, HTML, CSS/Tailwind, JavaScript/Node, and JSON-Server."
+                            data-tags="JavaScript, Tailwind CSS, Vite, Node.js"
+                            data-url="https://github.com/Danilo-Doria/TaskFlowSPA.git">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="project-item-number font-mono text-xs text-text-muted shrink-0 transition-colors group-hover:text-span">02.</span>
+                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">TaskFlow</span>
+                        </div>
+                        <svg class="w-4 h-4 text-text-muted shrink-0 transition-all duration-200 group-hover:text-span group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
 
-            <article>
-                <a href="https://github.com/Danilo-Doria/BasicInventorySystem" target="_blank" rel="noopener noreferrer"
-                   class="block outline-none hover:scale-105 focus:outline-dotted focus:outline-span focus:scale-105 focus:outline-2 focus:outline-offset-8 active:scale-100 transition-all duration-300 ease-out">
-                    <img src="/images/project-3.webp" alt="Basic Inventory System terminal preview" width="800" height="436" loading="lazy"
-                         class="w-full h-48 object-cover rounded-lg">
-                    <div class="card-content">
-                        <h3 class="mb-1 mt-3 font-bold text-span">Basic Inventory System</h3>
-                        <p>
-                            Inventory system project with CSV data persistence developed in Python.
-                        </p>
-                    </div>
-                </a>
-            </article>
+                    <!-- Project 3 -->
+                    <button type="button"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="project-preview-card"
+                            class="project-item group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border border-border bg-bg-card hover:border-span/60 hover:bg-bg2/50 outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
+                            data-img="/images/project-4.webp"
+                            data-title="Advanced Inventory System with CRUD"
+                            data-desc="Inventory management application developed using JavaScript/Node and JSON-Server with full CRUD operations."
+                            data-tags="JavaScript, Node.js, JSON-Server"
+                            data-url="https://github.com/Danilo-Doria/SimuladorDeCajeroAutomaticoBasico">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="project-item-number font-mono text-xs text-text-muted shrink-0 transition-colors group-hover:text-span">03.</span>
+                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">Advanced Inventory System</span>
+                        </div>
+                        <svg class="w-4 h-4 text-text-muted shrink-0 transition-all duration-200 group-hover:text-span group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
 
-            <article>
-                <a href="https://github.com/Danilo-Doria/Sistema-de-Gestion-de-Estudiantes-con-Persistencia-de-Datos.git" target="_blank" rel="noopener noreferrer"
-                   class="block outline-none hover:scale-105 focus:outline-dotted focus:outline-span focus:scale-105 focus:outline-2 focus:outline-offset-8 active:scale-100 transition-all duration-300 ease-out">
-                    <img src="/images/project-5.webp" alt="Student Management System screenshot" width="620" height="407" loading="lazy"
-                         class="w-full h-48 object-cover rounded-lg">
-                    <div class="card-content">
-                        <h3 class="mb-1 mt-3 font-bold text-span">Student Management System with Data Persistence</h3>
-                        <p>
-                            Student management system project developed using Python.
-                        </p>
-                    </div>
-                </a>
-            </article>
+                    <!-- Project 4 -->
+                    <button type="button"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="project-preview-card"
+                            class="project-item group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border border-border bg-bg-card hover:border-span/60 hover:bg-bg2/50 outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
+                            data-img="/images/project-3.webp"
+                            data-title="Basic Inventory System"
+                            data-desc="Inventory system project with CSV data persistence developed in Python."
+                            data-tags="Python, CSV, CLI"
+                            data-url="https://github.com/Danilo-Doria/BasicInventorySystem">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="project-item-number font-mono text-xs text-text-muted shrink-0 transition-colors group-hover:text-span">04.</span>
+                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">Inventory System</span>
+                        </div>
+                        <svg class="w-4 h-4 text-text-muted shrink-0 transition-all duration-200 group-hover:text-span group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
 
-            <article>
-                <a href="https://github.com/Danilo-Doria/RegistroBasicoDeEmpleados.git" target="_blank" rel="noopener noreferrer"
-                   class="block outline-none hover:scale-105 focus:outline-dotted focus:outline-span focus:scale-105 focus:outline-2 focus:outline-offset-8 active:scale-100 transition-all duration-300 ease-out">
-                    <img src="/images/project-6.webp" alt="Basic Employee Registration System preview" width="286" height="152" loading="lazy"
-                         class="w-full h-48 object-cover rounded-lg">
-                    <div class="card-content">
-                        <h3 class="mb-1 mt-3 font-bold text-span">Basic Employee Registration System</h3>
-                        <p>
-                            Employee registration system project developed using Python.
-                        </p>
-                    </div>
-                </a>
-            </article>
-        </div>
-    </section>
+                    <!-- Project 5 -->
+                    <button type="button"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="project-preview-card"
+                            class="project-item group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border border-border bg-bg-card hover:border-span/60 hover:bg-bg2/50 outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
+                            data-img="/images/project-5.webp"
+                            data-title="Student Management System"
+                            data-desc="Student management system project developed using Python with data persistence."
+                            data-tags="Python, Data Persistence"
+                            data-url="https://github.com/Danilo-Doria/Sistema-de-Gestion-de-Estudiantes-con-Persistencia-de-Datos.git">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="project-item-number font-mono text-xs text-text-muted shrink-0 transition-colors group-hover:text-span">05.</span>
+                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">Student Management System</span>
+                        </div>
+                        <svg class="w-4 h-4 text-text-muted shrink-0 transition-all duration-200 group-hover:text-span group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
 
-    <!-- Contact section -->
-    <section id="contact" aria-labelledby="contact-title" class="text-center mt-50 mb-20 scroll-m-10">
-        <p class="text-span text-lg mb-4 lg:text-xl xl:text-2xl" aria-hidden="true">04. Next Step</p>
-        <h2 id="contact-title" class="text-text2 text-4xl mb-4 lg:text-5xl font-extrabold">
-            Get In Touch
-        </h2>
-        <p class="mb-12 mx-auto leading-5 text-md w-70 sm:w-4/6 lg:text-sm xl:text-base lg:leading-8">
-            I am currently seeking new opportunities to grow as a professional and contribute all my skills.
-            If you have any questions or suggestions, please send me an email, and I will do my best to respond.
-        </p>
-        <a class="inline-block mb-32 text-span border py-3 px-4 rounded-lg transform transition duration-300 hover:-translate-1 shadow-span hover:shadow-[3px_3px] focus:-translate-1 focus:shadow-[3px_3px] outline-none"
-           href="mailto:danilodoria519@gmail.com" aria-label="Send an email to Danilo Doria">Mail Me
-        </a>
-    </section>
+                    <!-- Project 6-->
+                    <button type="button"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="project-preview-card"
+                            class="project-item group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border border-border bg-bg-card hover:border-span/60 hover:bg-bg2/50 outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
+                            data-img="/images/project-6.webp"
+                            data-title="Basic Employee Registration System"
+                            data-desc="Employee registration system project developed using Python and data structures."
+                            data-tags="Python, Data Structures"
+                            data-url="https://github.com/Danilo-Doria/RegistroBasicoDeEmpleados.git">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="project-item-number font-mono text-xs text-text-muted shrink-0 transition-colors group-hover:text-span">06.</span>
+                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">Employee Registration System</span>
+                        </div>
+                        <svg class="w-4 h-4 text-text-muted shrink-0 transition-all duration-200 group-hover:text-span group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact" aria-labelledby="contact-title" class="text-center mt-50 mb-20 scroll-m-10">
+            <p class="text-span font-mono text-lg mb-4 lg:text-xl xl:text-2xl" aria-hidden="true">04. Next Step</p>
+            <h2 id="contact-title" class="text-text1 font-serif text-4xl mb-4 lg:text-5xl font-extrabold">
+                Get In Touch
+            </h2>
+            <p class="mb-12 mx-auto leading-5 text-md w-70 sm:w-4/6 lg:text-sm xl:text-base lg:leading-8">
+                I am currently seeking new opportunities to grow as a professional and contribute all my skills.
+                If you have any questions or suggestions, please send me an email, and I will do my best to respond.
+            </p>
+            <a class="inline-block mb-32 text-span border py-3 px-4 rounded-lg transform transition duration-300 hover:-translate-1 shadow-span hover:shadow-[3px_3px] focus:-translate-1 focus:shadow-[3px_3px] outline-none font-mono"
+               href="mailto:danilodoria519@gmail.com" aria-label="Send an email to Danilo Doria">Mail Me
+            </a>
+        </section>
+    </div>
 </main>
 
 <footer>
@@ -369,13 +665,13 @@
                  src="/icons/github-icon.svg" alt="" aria-hidden="true" width="24" height="24">
         </a>
 
-        <a href="https://www.linkedin.com/in/danilodd/" rel="noopener noreferrer" target="_blank" aria-label="Danilo Doria on LinkedIn (opens in a new tab)"
+        <a href="https://www.linkedin.com/in/danilo-doria-diaz/" rel="noopener noreferrer" target="_blank" aria-label="Danilo Doria on LinkedIn (opens in a new tab)"
            class="group focus:-translate-y-1 focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
             <img class="w-5 hover:content-[url('/icons/linkedin-hover-icon.svg')] group-focus:content-[url('/icons/linkedin-hover-icon.svg')]"
                  src="/icons/linkedin-icon.svg" alt="" aria-hidden="true" width="20" height="20">
         </a>
     </div>
-    <p class="text-sm text-center">© <span id="year"></span> Danilo Doria — All rights reserved.</p>
+    <p class="text-sm text-center font-mono text-text-muted">© <span id="year"></span> Danilo Doria — All rights reserved.</p>
 </footer>
 
 <script type="module" src="/src/js/main.js"></script>
