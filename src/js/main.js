@@ -38,21 +38,25 @@ const closeMenu = ({ restoreFocus = false } = {}) => {
   menuButton.setAttribute("aria-label", "Open menu");
   document.body.classList.remove("overflow-hidden");
 
-  if (restoreFocus) menuButton.focus();
+  if (restoreFocus) {
+    menuButton.focus();
+  } else {
+    menuButton.blur();
+  }
 };
 
 menuButton.addEventListener("click", () => {
   if (menuButton.getAttribute("aria-expanded") === "true") {
-    closeMenu();
+    closeMenu({ restoreFocus: false });
   } else {
     openMenu();
   }
 });
 
-overlay.addEventListener("click", () => closeMenu({ restoreFocus: true }));
+overlay.addEventListener("click", () => closeMenu({ restoreFocus: false }));
 
 sidebar.addEventListener("click", (event) => {
-  if (event.target.closest("a[href^='#']")) closeMenu();
+  if (event.target.closest("a[href^='#']")) closeMenu({ restoreFocus: false });
 });
 
 document.addEventListener("keydown", (event) => {
@@ -186,4 +190,61 @@ if (previewImg && projectItems.length > 0) {
     });
   });
 }
+
+// Native Typewriter Animation
+const initTypewriter = () => {
+  const textEl = document.getElementById("typewriter-text");
+  if (!textEl) return;
+
+  let words = [];
+  try {
+    words = JSON.parse(textEl.getAttribute("data-words") || "[]");
+  } catch (e) {
+    console.error("Invalid data-words JSON", e);
+    return;
+  }
+
+  if (!words.length) return;
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion) {
+    textEl.textContent = words[0];
+    const cursor = document.getElementById("typewriter-cursor");
+    if (cursor) cursor.style.display = "none";
+    return;
+  }
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  const type = () => {
+    const currentWord = words[wordIndex];
+
+    if (isDeleting) {
+      charIndex--;
+      textEl.textContent = currentWord.substring(0, charIndex);
+    } else {
+      charIndex++;
+      textEl.textContent = currentWord.substring(0, charIndex);
+    }
+
+    let delay = isDeleting ? 45 : 85 + Math.random() * 30;
+
+    if (!isDeleting && charIndex === currentWord.length) {
+      delay = 2200;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      delay = 400;
+    }
+
+    setTimeout(type, delay);
+  };
+
+  setTimeout(type, 500);
+};
+
+initTypewriter();
 

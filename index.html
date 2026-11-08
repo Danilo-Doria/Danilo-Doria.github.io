@@ -61,6 +61,7 @@
                     "https://www.linkedin.com/in/danilo-doria-diaz/"
                 ],
                 "knowsAbout": [
+                    "Java",
                     "JavaScript",
                     "HTML",
                     "CSS",
@@ -71,7 +72,8 @@
                     "Spring Boot",
                     "PostgreSQL",
                     "MySQL",
-                    "Web Development"
+                    "Web Development",
+                    "Backend Development"
                 ]
             }
         }
@@ -98,7 +100,7 @@
                 aria-expanded="false"
                 aria-controls="sidebar"
                 aria-haspopup="true"
-                class="w-9 h-8 flex flex-col justify-between p-2 z-50 group focus:outline-dotted focus:outline-span focus:outline-2 focus:outline-offset-8 transition-all duration-300 ease-out">
+                class="w-9 h-8 flex flex-col justify-between p-2 z-50 group outline-none focus:outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-8 transition-all duration-300 ease-out">
             <span class="block w-full h-0.5 bg-span transition-all duration-300 group-[.open]:rotate-45 group-[.open]:translate-y-1"></span>
             <span class="block w-full h-0.5 bg-span transition-all duration-300 group-[.open]:hidden"></span>
             <span class="block w-full h-0.5 bg-span transition-all duration-300 group-[.open]:-rotate-45 group-[.open]:-translate-y-2.5"></span>
@@ -184,12 +186,17 @@
         <!-- Presentación / Hero -->
         <section id="presentation" aria-labelledby="hero-title" class="mt-40 md:mt-55 mx-4 sm:mx-10">
             <p class="text-span font-mono text-md mb-5 lg:text-lg xl:text-2xl">Hi, my name is</p>
-            <h1 id="hero-title" class="text-text1 text-5xl mb-7 lg:text-6xl xl:text-7xl font-extrabold font-serif">Danilo Doria</h1>
+            <h1 id="hero-title" class="text-text1 text-6xl mb-4 lg:text-6xl xl:text-8xl font-extrabold font-serif">Danilo Doria</h1>
+            <!-- Native Typewriter Subtitle -->
+            <div class="text-xl sm:text-2xl lg:text-3xl font-mono text-span mb-6 min-h-[2.25rem] sm:min-h-[2.75rem] flex items-center" aria-label="Roles">
+                <span class="sr-only">Future Full Stack Developer, Tech Enthusiast, Back-End Developer, Java & Spring Boot Developer</span>
+                <span id="typewriter-text"
+                      aria-hidden="true"
+                      data-words='["Future Full Stack Developer", "Tech Enthusiast", "Back-End Developer", "Java & Spring Boot Developer"]'></span>
+                <span id="typewriter-cursor" aria-hidden="true" class="inline-block w-0.5 sm:w-1 h-[1.15em] bg-span ml-1.5 animate-cursor"></span>
+            </div>
             <p class="leading-6 text-md w-full sm:w-3/4 lg:text-sm xl:text-lg lg:leading-7 xl:leading-9 mb-10">
-                I'm a <span class="text-span">web developer</span> focused on creating modern,
-                functional, and attractive websites,
-                always constantly <span class="text-span">learning</span> to offer the best digital solutions.
-                My goal is to specialize in <span class="text-span">mobile development and JavaScript.</span>
+                I'm a software developer specialized in <span class="text-span">backend development</span> with <span class="text-span">Java</span> and <span class="text-span">Spring Boot</span>, passionate about designing and implementing scalable, efficient, and maintainable software solutions.
             </p>
             <div class="flex flex-wrap items-center gap-4">
                 <a href="#projects"
@@ -205,14 +212,13 @@
                 <span class="text-span font-mono" aria-hidden="true">01. </span>About Me
             </h2>
             <p class="pr-5 leading-6 text-md w-full sm:w-4/6 md:w-full md:col-span-2 lg:text-sm xl:text-lg lg:leading-7 xl:leading-9">
-                My name is Danilo Andrés Doria Díaz, I am 24 years old and I am from Colombia. Since I was a child,
+                My name is Danilo Andrés Doria Díaz, from Colombia. Since I was a child,
                 I have always been interested in everything related to technology, computing, and video games.
                 You could say that my first contact with programming was at school, where I saw HTML for the first time.
                 Later on in college, while studying industrial engineering, I entered the world of programming
                 with C++ and later took a course in data cleaning and visualization with Python and Power BI.<br><br>
                 I am currently continuing to learn and improve my skills as a web developer in order to become competent
-                and be able to bring my knowledge and quality to my work. My main goal is to become a full stack developer
-                specializing in JavaScript.
+                and be able to bring my knowledge and quality to my work. My main goal is to become a full stack developer building and maintaining software solutions.
             </p>
 
             <div class="relative w-62 justify-self-center md:col-start-3 md:row-start-1 row-span-2 self-center md:w-4/3 lg:max-w-xs">
@@ -475,8 +481,8 @@
                         <!-- Imagen del proyecto -->
                         <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-bg1 border border-border/60 mb-5">
                             <img id="project-preview-img"
-                                 src="/images/project-2.webp"
-                                 alt="QuillAlert preview"
+                                 src="/images/project-6.webp"
+                                 alt="SkillBridge AI preview"
                                  width="800"
                                  height="450"
                                  class="w-full h-full object-cover transition-opacity duration-200">
@@ -485,25 +491,32 @@
                         <!-- Información: Título, Descripción, Badges y Link -->
                         <div class="space-y-4">
                             <h3 id="project-preview-title" class="font-serif text-2xl lg:text-3xl font-bold text-text1">
-                                QuillAlert
+                                SkillBridge AI
                             </h3>
 
                             <p id="project-preview-desc" class="text-sm lg:text-base text-text2 leading-relaxed font-sans min-h-[3.5rem]">
-                                QuillAlert is a digital web platform created to connect citizens with their majorship. Where users are allowed to create reports, see them and follow the report's status.
+                                Professional mentoring and services platform with hexagonal architecture. Features multimodal AI recommendations (text, voice, and image) via Gemini API, Cache-Aside with Redis, RabbitMQ event-driven messaging, and PostgreSQL.
                             </p>
 
                             <div class="pt-4 border-t border-border/70 flex flex-wrap items-center justify-between gap-3">
                                 <div id="project-preview-tags" class="flex flex-wrap gap-2" aria-label="Technologies used">
-                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">JavaScript</span>
-                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">Tailwind CSS</span>
-                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">HTML</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">Java 21</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">Spring Boot</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">Angular</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">Hexagonal Architecture</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">PostgreSQL</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">Redis</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">RabbitMQ</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">Gemini AI</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">ElevenLabs</span>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-bg1 border border-border/80 text-xs font-mono text-text1">Docker</span>
                                 </div>
 
                                 <a id="project-preview-link"
-                                   href="https://github.com/Danilo-Doria/QuillAlert"
+                                   href="https://github.com/Danilo-Doria/SkillBridge-AI-JAVA-Angular"
                                    target="_blank"
                                    rel="noopener noreferrer"
-                                   aria-label="View QuillAlert repository on GitHub (opens in a new tab)"
+                                   aria-label="View SkillBridge AI repository on GitHub (opens in a new tab)"
                                    class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-span border transform transition duration-300 hover:-translate-1 shadow-span hover:shadow-[3px_3px] focus:-translate-1 focus:shadow-[3px_3px] outline-none font-mono text-xs">
                                     <span>GitHub Repo</span>
                                     <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -523,14 +536,14 @@
                             aria-selected="true"
                             aria-controls="project-preview-card"
                             class="project-item active group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border-2 border-span bg-bg2/90 shadow-sm outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
-                            data-img="/images/project-2.webp"
-                            data-title="QuillAlert"
-                            data-desc="QuillAlert is a digital web platform created to connect citizens with their majorship. Where users are allowed to create reports, see them and follow the report's status."
-                            data-tags="JavaScript, Tailwind CSS, HTML"
-                            data-url="https://github.com/Danilo-Doria/QuillAlert">
+                            data-img="/images/project-6.webp"
+                            data-title="SkillBridge AI"
+                            data-desc="Professional mentoring and services platform with hexagonal architecture. Features multimodal AI recommendations (text, voice, and image) via Gemini API, Cache-Aside with Redis, RabbitMQ event-driven messaging, and PostgreSQL."
+                            data-tags="Java 21, Spring Boot, Angular, Hexagonal Architecture, PostgreSQL, Redis, RabbitMQ, Gemini AI, ElevenLabs, Docker"
+                            data-url="https://github.com/Danilo-Doria/SkillBridge-AI-JAVA-Angular">
                         <div class="flex items-center gap-3 min-w-0">
                             <span class="project-item-number font-mono text-xs text-span shrink-0">01.</span>
-                            <span class="project-item-title font-sans font-semibold text-base text-span truncate">QuillAlert</span>
+                            <span class="project-item-title font-sans font-semibold text-base text-span truncate">SkillBridge AI</span>
                         </div>
                         <svg class="w-4 h-4 text-span shrink-0 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M9 18l6-6-6-6"/>
@@ -543,14 +556,14 @@
                             aria-selected="false"
                             aria-controls="project-preview-card"
                             class="project-item group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border border-border bg-bg-card hover:border-span/60 hover:bg-bg2/50 outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
-                            data-img="/images/project-1.webp"
-                            data-title="TaskFlow (SPA)"
-                            data-desc="Single-page task management application with roles, developed using Vite, HTML, CSS/Tailwind, JavaScript/Node, and JSON-Server."
-                            data-tags="JavaScript, Tailwind CSS, Vite, Node.js"
-                            data-url="https://github.com/Danilo-Doria/TaskFlowSPA.git">
+                            data-img="/images/project-2.webp"
+                            data-title="QuillAlert"
+                            data-desc="A digital web platform created to connect citizens with their majorship. Where users are allowed to create reports, see them and follow the report's status."
+                            data-tags="JavaScript, Tailwind CSS, HTML5, Supabase, Node.js, Vite"
+                            data-url="https://github.com/Danilo-Doria/QuillAlert">
                         <div class="flex items-center gap-3 min-w-0">
                             <span class="project-item-number font-mono text-xs text-text-muted shrink-0 transition-colors group-hover:text-span">02.</span>
-                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">TaskFlow</span>
+                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">QuillAlert</span>
                         </div>
                         <svg class="w-4 h-4 text-text-muted shrink-0 transition-all duration-200 group-hover:text-span group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M9 18l6-6-6-6"/>
@@ -563,14 +576,14 @@
                             aria-selected="false"
                             aria-controls="project-preview-card"
                             class="project-item group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border border-border bg-bg-card hover:border-span/60 hover:bg-bg2/50 outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
-                            data-img="/images/project-4.webp"
-                            data-title="Advanced Inventory System with CRUD"
-                            data-desc="Inventory management application developed using JavaScript/Node and JSON-Server with full CRUD operations."
-                            data-tags="JavaScript, Node.js, JSON-Server"
-                            data-url="https://github.com/Danilo-Doria/SimuladorDeCajeroAutomaticoBasico">
+                            data-img="/images/project-1.webp"
+                            data-title="TaskFlow"
+                            data-desc="Single-page task management application with role based access control"
+                            data-tags="JavaScript, Tailwind CSS, Vite, Node.js"
+                            data-url="https://github.com/Danilo-Doria/TaskFlowSPA.git">
                         <div class="flex items-center gap-3 min-w-0">
                             <span class="project-item-number font-mono text-xs text-text-muted shrink-0 transition-colors group-hover:text-span">03.</span>
-                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">Advanced Inventory System</span>
+                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">TaskFlow</span>
                         </div>
                         <svg class="w-4 h-4 text-text-muted shrink-0 transition-all duration-200 group-hover:text-span group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M9 18l6-6-6-6"/>
@@ -583,14 +596,14 @@
                             aria-selected="false"
                             aria-controls="project-preview-card"
                             class="project-item group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border border-border bg-bg-card hover:border-span/60 hover:bg-bg2/50 outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
-                            data-img="/images/project-3.webp"
-                            data-title="Basic Inventory System"
-                            data-desc="Inventory system project with CSV data persistence developed in Python."
-                            data-tags="Python, CSV, CLI"
-                            data-url="https://github.com/Danilo-Doria/BasicInventorySystem">
+                            data-img="/images/project-4.webp"
+                            data-title="Advanced Inventory System with CRUD"
+                            data-desc="Inventory management application developed with full CRUD operations."
+                            data-tags="Tailwind CSS, JavaScript, Node.js"
+                            data-url="https://github.com/Danilo-Doria/SimuladorDeCajeroAutomaticoBasico">
                         <div class="flex items-center gap-3 min-w-0">
                             <span class="project-item-number font-mono text-xs text-text-muted shrink-0 transition-colors group-hover:text-span">04.</span>
-                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">Inventory System</span>
+                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">Advanced Inventory System</span>
                         </div>
                         <svg class="w-4 h-4 text-text-muted shrink-0 transition-all duration-200 group-hover:text-span group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M9 18l6-6-6-6"/>
@@ -603,34 +616,34 @@
                             aria-selected="false"
                             aria-controls="project-preview-card"
                             class="project-item group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border border-border bg-bg-card hover:border-span/60 hover:bg-bg2/50 outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
-                            data-img="/images/project-5.webp"
-                            data-title="Student Management System"
-                            data-desc="Student management system project developed using Python with data persistence."
-                            data-tags="Python, Data Persistence"
-                            data-url="https://github.com/Danilo-Doria/Sistema-de-Gestion-de-Estudiantes-con-Persistencia-de-Datos.git">
+                            data-img="/images/project-3.webp"
+                            data-title="Basic Inventory System"
+                            data-desc="Inventory system project with CSV data persistence developed in Python."
+                            data-tags="Python, CSV, CLI"
+                            data-url="https://github.com/Danilo-Doria/BasicInventorySystem">
                         <div class="flex items-center gap-3 min-w-0">
                             <span class="project-item-number font-mono text-xs text-text-muted shrink-0 transition-colors group-hover:text-span">05.</span>
-                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">Student Management System</span>
+                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">Inventory System</span>
                         </div>
                         <svg class="w-4 h-4 text-text-muted shrink-0 transition-all duration-200 group-hover:text-span group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M9 18l6-6-6-6"/>
                         </svg>
                     </button>
 
-                    <!-- Project 6-->
+                    <!-- Project 6 -->
                     <button type="button"
                             role="tab"
                             aria-selected="false"
                             aria-controls="project-preview-card"
                             class="project-item group w-full text-left p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 border border-border bg-bg-card hover:border-span/60 hover:bg-bg2/50 outline-none focus-visible:outline-dotted focus-visible:outline-span focus-visible:outline-2 focus-visible:outline-offset-2"
-                            data-img="/images/project-6.webp"
-                            data-title="Basic Employee Registration System"
-                            data-desc="Employee registration system project developed using Python and data structures."
-                            data-tags="Python, Data Structures"
-                            data-url="https://github.com/Danilo-Doria/RegistroBasicoDeEmpleados.git">
+                            data-img="/images/project-5.webp"
+                            data-title="Student Management System"
+                            data-desc="Student management system project developed using Python with data persistence."
+                            data-tags="Python, Data Persistence, CLI"
+                            data-url="https://github.com/Danilo-Doria/Sistema-de-Gestion-de-Estudiantes-con-Persistencia-de-Datos.git">
                         <div class="flex items-center gap-3 min-w-0">
                             <span class="project-item-number font-mono text-xs text-text-muted shrink-0 transition-colors group-hover:text-span">06.</span>
-                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">Employee Registration System</span>
+                            <span class="project-item-title font-sans font-medium text-base text-text1 shrink-0 transition-colors group-hover:text-span truncate">Student Management System</span>
                         </div>
                         <svg class="w-4 h-4 text-text-muted shrink-0 transition-all duration-200 group-hover:text-span group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M9 18l6-6-6-6"/>
